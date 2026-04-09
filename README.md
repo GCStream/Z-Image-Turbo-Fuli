@@ -25,7 +25,7 @@ We run experiments on both models across three complementary strategies:
 
 Both base and Turbo artist LoRA runs were completed:
 - **`lora_artist_run01`** — Z-Image base, 1177 images, 405 artists, 2000 steps
-- **`lora_artist_turbo_run01`** — Z-Image Turbo, 200 images, 8 artists (≥21 images), 3000 steps → **`DownFlow/Z-Image-Turbo-Fuli`**
+- **`lora_artist_turbo_run01`** — Z-Image Turbo, 200 images, 8 artists (≥21 images), **5000 steps** (3000 initial + 2000 continued at lr=5e-5) → **`DownFlow/Z-Image-Turbo-Fuli`**
 
 Quick start with the published Turbo adapter:
 
@@ -43,8 +43,8 @@ image = pipe("portrait of 年年, long_hair, black_hair, elegant", num_inference
 **Key findings:**
 - Both Z-Image and Z-Image Turbo are fine-tuneable with LoRA (~39M trainable params, 0.3% of 12B)
 - Base model (50-step) shows stronger identity recall at equivalent steps vs Turbo (8-step)
-- Turbo LoRA: artist identity emerges at ~1000 steps, converges around 2500–3000 steps
-- `--lora_scale 2.0` improves Turbo identity recall without visible artefacts at 8-step inference
+- Turbo LoRA: artist identity emerges at ~1000 steps, converges around 2500–3000 steps, plateaus at 5000
+- `--lora_scale 3.0` (EMA, step 5000) is the recommended sweet spot for Turbo identity recall
 - Abliteration (Stage 2) suppresses refusal behaviour with minimal quality impact at α≤0.1
 
 ---
@@ -529,8 +529,8 @@ To teach Z-Image Turbo to reproduce specific artist identities via trigger-token
 | LoRA rank / alpha | 32 / 32 |
 | Target modules | `to_q`, `to_k`, `to_v`, `w1`, `w2`, `w3` |
 | Trainable params | ~39M |
-| Steps | 3000 (~60 epochs over 200 images, eff_batch=4) |
-| LR | 1e-4 cosine, 100-step warmup |
+| Steps | **5000** (3000 initial at lr=1e-4 + 2000 continued at lr=5e-5, EMA, ~100 epochs) |
+| LR | 1e-4 cosine (steps 0–3000) → 5e-5 cosine (steps 3000–5000), 100-step warmup each |
 | Regularisation | reg_ratio=0.25 (reg dataset interleaved), flip_aug, caption_dropout=0.05 |
 | EMA | decay=0.9999 |
 | Timestep bias | 1.2 (biases towards high-noise steps) |
@@ -564,16 +564,37 @@ To teach Z-Image Turbo to reproduce specific artist identities via trigger-token
 | Step 1000 EMA | [`outputs/eval_lora_artist_turbo_step1000/`](outputs/eval_lora_artist_turbo_step1000/) | ![](outputs/eval_lora_artist_turbo_step1000/summary_grid.jpg) |
 | Step 1500 EMA | [`outputs/eval_lora_artist_turbo_step1500/`](outputs/eval_lora_artist_turbo_step1500/) | ![](outputs/eval_lora_artist_turbo_step1500/summary_grid.jpg) |
 | Step 2500 EMA | [`outputs/eval_lora_artist_turbo_step2500/`](outputs/eval_lora_artist_turbo_step2500/) | ![](outputs/eval_lora_artist_turbo_step2500/summary_grid.jpg) |
-| Final (3000 EMA) | [`outputs/eval_lora_artist_turbo_final/`](outputs/eval_lora_artist_turbo_final/) | ![](outputs/eval_lora_artist_turbo_final/summary_grid.jpg) |
+| Step 3000 EMA | [`outputs/eval_lora_artist_turbo_final/`](outputs/eval_lora_artist_turbo_final/) | ![](outputs/eval_lora_artist_turbo_final/summary_grid.jpg) |
+| **Step 5000 EMA** (scale=1.2) | [`outputs/eval_lora_turbo_step5000/`](outputs/eval_lora_turbo_step5000/) | ![](outputs/eval_lora_turbo_step5000/summary_grid.jpg) |
+| **Step 5000 EMA** (scale=3.0) | [`outputs/eval_lora_turbo_step5000_scale3/`](outputs/eval_lora_turbo_step5000_scale3/) | ![](outputs/eval_lora_turbo_step5000_scale3/summary_grid.jpg) |
 
-**LoRA scale experiments** — at default scale=1.0 (alpha/rank=1) differences are subtle on Turbo; scale=2.0 amplifies without artefacts:
+**LoRA scale experiments** — at default scale=1.0 (alpha/rank=1) differences are subtle on Turbo; **scale=3.0 is the recommended value** for step-5000 EMA, providing strong artist identity without visible artefacts on 8-step Turbo inference:
 
 ```bash
+# Recommended: scale=3.0 (step 5000 EMA)
 python3 stage3_finetune/eval_lora_artist.py \
     --turbo \
     --adapter /scratch/training/lora_artist_turbo_run01/final_adapter \
-    --lora_scale 2.0 --res 512
+    --lora_scale 3.0 --res 512
+
+# Lighter touch: scale=1.2
+python3 stage3_finetune/eval_lora_artist.py \
+    --turbo \
+    --adapter /scratch/training/lora_artist_turbo_run01/final_adapter \
+    --lora_scale 1.2 --res 512
 ```
+
+**Scale=3.0 eval results** (step 5000 EMA, 8 artists + 4 SFW anchors, seed=42):
+
+Summary: [`outputs/eval_lora_turbo_step5000_scale3/summary_grid.jpg`](outputs/eval_lora_turbo_step5000_scale3/summary_grid.jpg)
+
+| 萌芽儿o0 | 年年 | 封疆疆v | 焖焖碳 |
+|---|---|---|---|
+| ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_000.jpg) | ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_001.jpg) | ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_002.jpg) | ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_003.jpg) |
+
+| 星之迟迟 | 蠢沫沫 | 雨波HaneAme | 清水由乃 |
+|---|---|---|---|
+| ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_004.jpg) | ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_005.jpg) | ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_006.jpg) | ![](outputs/eval_lora_turbo_step5000_scale3/panels/panel_007.jpg) |
 
 **Loading at inference:**
 ```python
@@ -774,8 +795,9 @@ image = pipe(
 # After loading the PeftModel, before inference:
 for module in pipe.transformer.modules():
     if hasattr(module, "scaling"):
-        module.scaling = {k: v * 1.5 for k, v in module.scaling.items()}
-# Recommended range: 1.0–2.0. Values > 3 may cause artefacts.
+        module.scaling = {k: v * 3.0 for k, v in module.scaling.items()}
+# Recommended: scale=3.0 for step-5000 EMA adapter (strong identity, no artefacts).
+# Lighter touch at scale=1.2; values > 5 may saturate style.
 ```
 
 #### Serve with vLLM (OpenAI-compatible endpoint)
