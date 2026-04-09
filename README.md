@@ -1,10 +1,13 @@
 # Z-Image Turbo × Fuliji — Fine-tuning Exploration
 
-> **DownFlow** · 下流科技 · April 2026  
-> Base models: [`Tongyi-MAI/Z-Image`](https://huggingface.co/Tongyi-MAI/Z-Image) · [`Tongyi-MAI/Z-Image-Turbo`](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)  
-> Fine-tuned model: [`DownFlow/Z-Image-Turbo-Fuli`](https://huggingface.co/DownFlow/Z-Image-Turbo-Fuli)  
-> Dataset: [`DownFlow/fuliji`](https://huggingface.co/datasets/DownFlow/fuliji)  
-> Code: this repo
+<p align="center">
+  <a href="https://huggingface.co/DownFlow/Z-Image-Turbo-Fuli"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-DownFlow%2FZ--Image--Turbo--Fuli-blue" alt="Model"></a>
+  <a href="https://huggingface.co/datasets/DownFlow/fuliji"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-DownFlow%2Ffuliji-blue" alt="Dataset"></a>
+  <a href="https://huggingface.co/Tongyi-MAI/Z-Image-Turbo"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Base-Z--Image--Turbo-orange" alt="Base Model Turbo"></a>
+  <a href="https://huggingface.co/Tongyi-MAI/Z-Image"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Base-Z--Image-orange" alt="Base Model"></a>
+  <img src="https://img.shields.io/badge/org-DownFlow%20%E4%B8%8B%E6%B5%81%E7%A7%91%E6%8A%80-red" alt="DownFlow">
+  <img src="https://img.shields.io/badge/April-2026-lightgrey" alt="Date">
+</p>
 
 ---
 
