@@ -423,6 +423,10 @@ def main():
                              ">1 biases toward low-noise (style) steps.")
     parser.add_argument("--ema_decay", type=float, default=0.9999,
                         help="EMA decay for LoRA adapter weights. 0 = disabled.")
+    parser.add_argument("--resume", type=Path, default=None,
+                        help="Path to an existing adapter checkpoint dir to resume from.")
+    parser.add_argument("--resume_step", type=int, default=0,
+                        help="Global step to resume from (must match the checkpoint).")
     parser.add_argument("--output_dir", type=Path, default=default_out)
     args = parser.parse_args()
 
@@ -477,6 +481,27 @@ def main():
             base_model.enable_gradient_checkpointing()
             print("Gradient checkpointing enabled.")
 
+    # ── resume from existing checkpoint ─────────────────────────────────────
+    if args.resume is not None:
+        print(f"\nResuming from checkpoint: {args.resume} (step {args.resume_step})")
+        from safetensors.torch import load_file as st_load
+        ckpt_file = args.resume / "adapter_model.safetensors"
+        ckpt_state = st_load(str(ckpt_file), device="cpu")
+        # PEFT save_pretrained stores keys as  base_model.model.<path>.lora_A.weight
+        # but state_dict() returns              base_model.model.<path>.lora_A.default.weight
+        # Insert ".default" before the final ".weight" to align.
+        remapped = {}
+        import re as _re
+        for k, v in ckpt_state.items():
+            k_fixed = _re.sub(r'\.(lora_A|lora_B|lora_embedding_A|lora_embedding_B)\.weight$',
+                              r'.\1.default.weight', k)
+            remapped[k_fixed] = v
+        missing, unexpected = peft_transformer.load_state_dict(remapped, strict=False)
+        non_lora_missing = [k for k in missing if "lora_" not in k]
+        print(f"  Loaded {len(remapped)} tensors from checkpoint.")
+        if non_lora_missing:
+            print(f"  Warning: {len(non_lora_missing)} non-LoRA keys missing: {non_lora_missing[:3]}")
+
     # ── EMA on LoRA parameters only ──────────────────────────────────────────
     # We deepcopy just the adapter state dict for lightweight EMA tracking.
     ema_state: dict[str, torch.Tensor] | None = None
@@ -520,7 +545,7 @@ def main():
     eff_batch = args.batch_size * args.grad_accum
     print(f"\nStarting LoRA training:  {args.steps} steps, eff_batch={eff_batch}\n")
 
-    global_step = 0
+    global_step = args.resume_step
     accum_loss  = 0.0
     accum_count = 0
     t0 = time.time()
@@ -532,6 +557,9 @@ def main():
     for micro_step in range(args.steps * args.grad_accum):
         if global_step >= args.steps:
             break
+        # skip micro-steps already completed before resume
+        if micro_step < args.resume_step * args.grad_accum:
+            continue
 
         # Decide this micro-step's data source
         use_reg = (

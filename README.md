@@ -696,64 +696,329 @@ zimage-nitro/
 
 ## Appendix A — Running the Code
 
+### A.0 — Setup
+
 ```bash
-# 0. Install dependencies
+# Clone the repo
+git clone https://github.com/GCStream/Z-Image-Turbo-Fuli.git
+cd Z-Image-Turbo-Fuli
+
+# Install dependencies (requires PyTorch ≥ 2.3 with CUDA/ROCm)
 pip install git+https://github.com/huggingface/diffusers
 pip install -r requirements.txt
 
-# ── Stage 1 ───────────────────────────────────────────────────────────────────
+# Required for artist LoRA training and eval
+pip install peft safetensors huggingface_hub
 
-# 1. Weight analysis (CPU, ~5 min)
+# Optional: CJK font for eval panels with Chinese artist names
+mkdir -p assets/fonts
+wget -q "https://github.com/googlefonts/noto-cjk/raw/main/Sans/OTC/NotoSansCJK-Regular.ttc" \
+     -O assets/fonts/NotoSansCJK-Regular.ttc
+
+# Set your HuggingFace token (needed for push commands)
+echo "HF_TOKEN=hf_your_token_here" > .env
+```
+
+---
+
+### A.1 — Inference
+
+#### Quick inference with the published merged model (no PEFT needed)
+
+```python
+import torch
+from diffusers import DiffusionPipeline
+
+pipe = DiffusionPipeline.from_pretrained(
+    "DownFlow/Z-Image-Turbo-Fuli",
+    torch_dtype=torch.bfloat16,
+).to("cuda")
+
+# Prepend "by <artist>," to trigger artist style.
+# Trained artists: 萌芽儿o0, 年年, 封疆疆v, 焖焖碳, 星之迟迟, 蠢沫沫, 雨波HaneAme, 清水由乃
+image = pipe(
+    prompt="by 蠢沫沫, 1girl, soft lighting, smile",
+    num_inference_steps=8,
+    guidance_scale=0.0,   # Z-Image Turbo is CFG-free
+    height=512, width=512,
+).images[0]
+image.save("output.png")
+```
+
+#### Inference with the LoRA adapter (PEFT, dynamic loading)
+
+```python
+import torch
+from diffusers import DiffusionPipeline
+from peft import PeftModel
+
+pipe = DiffusionPipeline.from_pretrained(
+    "Tongyi-MAI/Z-Image-Turbo",
+    torch_dtype=torch.bfloat16,
+).to("cuda")
+
+pipe.transformer = PeftModel.from_pretrained(
+    pipe.transformer, "DownFlow/Z-Image-Turbo-Fuli-LoRA"
+)
+
+image = pipe(
+    prompt="by 年年, 1girl, white dress, cherry blossoms",
+    num_inference_steps=8,
+    guidance_scale=0.0,
+).images[0]
+```
+
+#### Adjust LoRA scale at runtime
+
+```python
+# After loading the PeftModel, before inference:
+for module in pipe.transformer.modules():
+    if hasattr(module, "scaling"):
+        module.scaling = {k: v * 1.5 for k, v in module.scaling.items()}
+# Recommended range: 1.0–2.0. Values > 3 may cause artefacts.
+```
+
+#### Serve with vLLM (OpenAI-compatible endpoint)
+
+```bash
+pip install "vllm>=0.8.0"
+
+# Use the merged model — no PEFT dependency at serve time
+vllm serve DownFlow/Z-Image-Turbo-Fuli \
+    --task generate \
+    --dtype bfloat16 \
+    --max-model-len 512 \
+    --port 8000
+```
+
+```bash
+# Call via curl
+curl http://localhost:8000/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "DownFlow/Z-Image-Turbo-Fuli",
+    "prompt": "by 蠢沫沫, 1girl, smile",
+    "n": 1,
+    "size": "512x512"
+  }'
+```
+
+---
+
+### A.2 — Training
+
+#### A.2.1 — Artist Identity LoRA (Stage 3D)
+
+Train a rank-32 LoRA on the Fuliji dataset to teach artist trigger tokens.
+
+**Z-Image Turbo — 8 artists, ~200 images, 3000 steps (our published run):**
+
+```bash
+python3 stage3_finetune/train_lora_artist.py \
+    --model_path /path/to/Z-Image-Turbo \
+    --parquet /path/to/fuliji_dataset.parquet \
+    --min_count 21 \
+    --reg_dataset finetune_dataset \
+    --reg_ratio 0.25 \
+    --steps 3000 \
+    --batch_size 1 --grad_accum 4 \
+    --lr 1e-4 --warmup_steps 100 --weight_decay 0.01 \
+    --rank 32 --res 512 --save_every 500 \
+    --grad_ckpt --flip_aug \
+    --caption_dropout 0.05 --ema_decay 0.9999 --timestep_bias 1.2 \
+    --output_dir /scratch/training/lora_artist_turbo_run01
+```
+
+**Z-Image base — all 405 artists, 1177 images, 2000 steps:**
+
+```bash
+python3 stage3_finetune/train_lora_artist.py \
+    --parquet /path/to/fuliji_dataset.parquet \
+    --reg_dataset finetune_dataset \
+    --reg_ratio 0.25 \
+    --steps 2000 \
+    --batch_size 1 --grad_accum 4 \
+    --lr 1e-4 --warmup_steps 100 --weight_decay 0.01 \
+    --rank 32 --res 512 --save_every 500 \
+    --grad_ckpt --flip_aug \
+    --caption_dropout 0.05 --ema_decay 0.9999 --timestep_bias 1.2 \
+    --output_dir /scratch/training/lora_artist_run01
+```
+
+**Resume from a checkpoint:**
+
+```bash
+python3 stage3_finetune/train_lora_artist.py \
+    --model_path /path/to/Z-Image-Turbo \
+    --parquet /path/to/fuliji_dataset.parquet \
+    --min_count 21 \
+    --resume /scratch/training/lora_artist_turbo_run01/adapter_checkpoint_03000_ema \
+    --resume_step 3000 \
+    --steps 5000 \
+    ...same flags as original run... \
+    --output_dir /scratch/training/lora_artist_turbo_run01
+```
+
+Key arguments:
+
+| Argument | Default | Description |
+|---|---|---|
+| `--parquet` | — | Path to `fuliji_dataset.parquet` |
+| `--min_count N` | 1 | Only include artists with ≥ N images |
+| `--rank` | 32 | LoRA rank |
+| `--reg_ratio` | 0.25 | Fraction of steps using regularisation images |
+| `--ema_decay` | 0.9999 | EMA decay for adapter weights (0 = off) |
+| `--timestep_bias` | 1.2 | Bias sampling toward style (low-noise) timesteps |
+| `--lora_scale` | — | (eval only) scale the adapter influence |
+| `--resume` | — | Path to checkpoint dir to continue from |
+| `--resume_step` | 0 | Global step of the resumed checkpoint |
+
+#### A.2.2 — Full Fine-tune (Stage 3B)
+
+```bash
+python3 stage3_finetune/train_fullft.py \
+    --dataset finetune_dataset \
+    --text_col text_en \
+    --steps 2000 \
+    --batch_size 1 --grad_accum 4 \
+    --lr 8e-6 --warmup_steps 200 --weight_decay 0.01 \
+    --res 512 --save_every 500 --grad_ckpt \
+    --flip_aug --caption_dropout 0.1 --ema_decay 0.9999 --timestep_bias 1.2 \
+    --output_dir /scratch/training/fullft_run01
+```
+
+#### A.2.3 — Build a local fine-tune dataset
+
+```bash
+# Prepare images: resize to 512, strip top 5% (watermark), write metadata.jsonl
+python3 stage3_finetune/build_dataset.py \
+    --input_dir lora_image_raw \
+    --output_dir finetune_dataset \
+    --strip_top_frac 0.05 \
+    --training_res 512
+
+# Re-caption with a long-form VLM caption (requires qwen2.5-vl or similar)
+python3 stage3_finetune/recaption_long.py
+```
+
+---
+
+### A.3 — Evaluation
+
+#### A.3.1 — Artist LoRA eval panels (3-column: original | base | LoRA)
+
+```bash
+# Evaluate the final Turbo LoRA adapter — 25 random artists
+python3 stage3_finetune/eval_lora_artist.py \
+    --turbo \
+    --adapter /scratch/training/lora_artist_turbo_run01/final_adapter \
+    --n_artist 25 --n_sfw 5 --res 512 --seed 42 \
+    --out outputs/eval_lora_artist_turbo_final
+
+# Evaluate only the 8 trained artists
+python3 stage3_finetune/eval_lora_artist.py \
+    --turbo \
+    --adapter /scratch/training/lora_artist_turbo_run01/final_adapter \
+    --artist_filter 萌芽儿o0 年年 封疆疆v 焖焖碳 星之迟迟 蠢沫沫 雨波HaneAme 清水由乃 \
+    --n_sfw 5 --res 512 --seed 42 \
+    --out outputs/eval_lora_artist_turbo_trained
+
+# Evaluate an intermediate checkpoint
+python3 stage3_finetune/eval_lora_artist.py \
+    --turbo \
+    --adapter /scratch/training/lora_artist_turbo_run01/adapter_checkpoint_01000_ema \
+    --n_artist 25 --n_sfw 5 --res 512 \
+    --out outputs/eval_lora_artist_turbo_step1000
+
+# Adjust LoRA scale (default 1.0; try 1.5–2.0 for stronger identity)
+python3 stage3_finetune/eval_lora_artist.py \
+    --turbo \
+    --adapter /scratch/training/lora_artist_turbo_run01/final_adapter \
+    --lora_scale 2.0 \
+    --artist_filter 蠢沫沫 年年 \
+    --out outputs/eval_scale2
+```
+
+Key `eval_lora_artist.py` arguments:
+
+| Argument | Default | Description |
+|---|---|---|
+| `--turbo` | off | Use Z-Image-Turbo (8-step, CFG=0) |
+| `--adapter PATH` | — | Path to PEFT adapter directory |
+| `--lora_scale FLOAT` | 1.0 | Multiply adapter scaling dict |
+| `--artist_filter NAME …` | — | Evaluate specific artists only |
+| `--n_artist INT` | 25 | Number of randomly sampled artists |
+| `--n_sfw INT` | 5 | SFW prompts to include |
+| `--res INT` | 512 | Output resolution |
+
+#### A.3.2 — Full fine-tune eval (4-column panels)
+
+```bash
+python3 stage3_finetune/eval_fullft.py \
+    --ft_path /scratch/training/fullft_run01/final_transformer \
+    --n_train 15 --n_sfw 5 --res 512 --steps 50 --seed 42
+```
+
+#### A.3.3 — Stage 1 & 2 evals
+
+```bash
+# Weight-space comparison: cosine similarity, norm ratios, per-layer stats
 python3 stage1_analysis/compare_models.py
 
-# 2. Generate ~100 comparison pairs (GPU required, ~10 min on MI300X)
+# Generate 100 base model comparison pairs (Z-Image vs Z-Image Turbo)
 python3 stage1_analysis/generate_comparisons.py --n 100 --res 512 --seed 42
 
-# ── Stage 2 ───────────────────────────────────────────────────────────────────
-
-# 2A. Refusal study baseline (download nsfw_detect, VLM caption, generate)
-python3 stage2_abliteration/refusal_study.py --n 100 --res 512 --seed 42
-# Optional (VLM step only, no GPU generation):
-#   python3 stage2_abliteration/refusal_study.py --n 100 --no-gen
-
-# 2B. Extract abliteration directions (all 30 layers, 50 prompts each, ~30 min)
-python3 stage2_abliteration/find_directions.py \
-    --n_each 50 --layer_start 0 --layer_end 29 --res 256
-# Output: stage2_abliteration/directions/nsfw_vs_sfw.pt
-
-# 2C. Apply rank-1 ablation and save steered model
-python3 stage2_abliteration/steer_weights.py \
-    --layers $(seq 0 29) --alpha 1.0
-# Output: $TRAINING_SCRATCH/z-image-abliterated/
-
-# 2D. Evaluate abliteration quality (original vs. steered, 30 pairs)
+# Abliteration evaluation
 python3 stage2_abliteration/eval_steered.py --n 30 --res 512
-# Output: outputs/eval_steered/
+```
 
-# Partial suppression sweep (e.g. alpha=0.5, only deep layers):
-python3 stage2_abliteration/eval_steered.py \
-    --layers 16 17 18 19 20 21 22 23 24 25 26 27 28 29 --alpha 0.5 --n 30
+---
 
-# ── Stage 3 ───────────────────────────────────────────────────────────────────
+### A.4 — Upload to HuggingFace
 
-# 3A. LoRA fine-tune (rank=16, attn only, 500 steps)
-python3 stage3_finetune/train_lora.py \
-    --dataset DRDELATV/SHORT_NSFW \
-    --rank 16 --alpha 16 --steps 500 --grad_accum 4 --lr 1e-4 \
-    --output_dir /scratch/training/lora_nsfw_r16
+#### Upload the LoRA adapter only (lightweight, ~271 MB)
 
-# 3A-eval. 3-column eval: base | LoRA | Turbo+LoRA transfer
-python3 stage3_finetune/eval_lora.py \
-    --lora_path /scratch/training/lora_nsfw_r16/final_adapter \
-    --n_nsfw 15 --n_sfw 10 --res 512 --steps 50 --with_turbo
+```bash
+# Set token
+export HF_TOKEN=hf_your_token_here
 
-# 3B. Full fine-tune (all params, 2000 steps, no PEFT dependency at inference)
-python3 stage3_finetune/train_fullft.py \
-    --dataset DRDELATV/SHORT_NSFW \
-    --steps 2000 --grad_accum 4 --lr 2e-5 --warmup_steps 50 \
-    --res 512 --save_every 500 \
-    --grad_ckpt \
-    --output_dir /scratch/training/fullft_run01
+# Upload adapter files to your repo
+hf upload YOUR_USERNAME/your-lora-repo \
+    /path/to/final_adapter \
+    --type model \
+    --commit-message "Upload LoRA adapter"
+```
+
+> Make sure `adapter_config.json` has `"base_model_name_or_path": "Tongyi-MAI/Z-Image-Turbo"` and  
+> `"task_type": "FEATURE_EXTRACTION"` (not `null`) before uploading.
+
+#### Merge LoRA into base weights and upload (~20 GB merged model)
+
+```bash
+set -a && source .env && set +a
+
+python3 scripts/merge_and_push.py \
+    --base_path /path/to/Z-Image-Turbo \
+    --adapter_path /path/to/final_adapter \
+    --output_dir /tmp/merged_model \
+    --repo_id YOUR_USERNAME/your-merged-model-repo
+    # Add --private to keep the repo private
+```
+
+This script:
+1. Loads the base pipeline (bfloat16)
+2. Applies the adapter with `PeftModel.from_pretrained`
+3. Calls `merge_and_unload()` to bake weights permanently
+4. Saves the full diffusers pipeline to `--output_dir`
+5. Pushes to HuggingFace Hub via `upload_folder`
+
+The resulting model has no PEFT dependency — load with `DiffusionPipeline.from_pretrained` directly and serve with `vllm serve`.
+
+#### Upload the dataset
+
+```bash
+python3 stage3_finetune/push_to_hub.py
+# Pushes finetune_dataset/ to DownFlow/fuliji (configured inside the script)
 ```
 
 ## Appendix B — Dataset Inventory
