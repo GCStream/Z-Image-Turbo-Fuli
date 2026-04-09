@@ -23,7 +23,9 @@ env/
 
 # ── Jupyter ───────────────────────────────────────────────────────────────────
 .ipynb_checkpoints/
-*.ipynb
+.ipynb_checkpoints/
+# Track notebooks in notebooks/ but ignore checkpoint dirs
+!notebooks/*.ipynb
 
 # ── model weights & caches ───────────────────────────────────────────────────
 # Never commit raw safetensors / pytorch checkpoints to the repo.
