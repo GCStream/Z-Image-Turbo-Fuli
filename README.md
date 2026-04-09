@@ -1,7 +1,7 @@
-# Z-Image Turbo × Fuliji — Fine-tuning Exploration
+# Z-Image × Fuliji — Fine-tuning Exploration
 
 <p align="center">
-  <a href="https://huggingface.co/DownFlow/Z-Image-Turbo-Fuli"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-DownFlow%2FZ--Image--Turbo--Fuli-blue" alt="Model"></a>
+  <a href="https://huggingface.co/DownFlow/Z-Image-Turbo-Fuli"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-DownFlow%2FZ--Image--Turbo--Fuli-blue" alt="Fine-tuned Model"></a>
   <a href="https://huggingface.co/datasets/DownFlow/fuliji"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-DownFlow%2Ffuliji-blue" alt="Dataset"></a>
   <a href="https://huggingface.co/Tongyi-MAI/Z-Image-Turbo"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Base-Z--Image--Turbo-orange" alt="Base Model Turbo"></a>
   <a href="https://huggingface.co/Tongyi-MAI/Z-Image"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Base-Z--Image-orange" alt="Base Model"></a>
@@ -13,17 +13,21 @@
 
 ## Abstract
 
-This project explores how **Z-Image Turbo** — a single-stream diffusion transformer capable of high-quality 8-step inference — can be adapted to the **Fuliji dataset** ([`DownFlow/fuliji`](https://huggingface.co/datasets/DownFlow/fuliji)), a curated collection of 1177 images spanning 405 artists.
+This project explores how both **Z-Image** (50-step, CFG-enabled) and **Z-Image Turbo** (8-step, CFG-free) — single-stream diffusion transformers sharing the same S3-DiT architecture — can be fine-tuned on the **Fuliji dataset** ([`DownFlow/fuliji`](https://huggingface.co/datasets/DownFlow/fuliji)), a curated collection of 1177 images spanning 405 artists.
 
-We investigate three complementary fine-tuning strategies:
+We run experiments on both models across three complementary strategies:
 
-| Stage | Method | Goal |
-|---|---|---|
-| **2** | Residual-stream abliteration | Remove refusal behaviour via direction subtraction |
-| **3B/D** | Full fine-tune (all weights) | Domain adaptation to Fuliji image style/content |
-| **3D** | Artist identity LoRA | Teach specific artist trigger tokens (rank-32 PEFT) |
+| Stage | Method | Models | Goal |
+|---|---|---|---|
+| **2** | Residual-stream abliteration | Z-Image | Remove refusal behaviour via direction subtraction |
+| **3B** | Full fine-tune (all weights) | Z-Image + Turbo | Domain adaptation to Fuliji style/content |
+| **3D** | Artist identity LoRA | Z-Image + **Turbo** | Teach artist trigger tokens (rank-32 PEFT) |
 
-The resulting fine-tuned checkpoint — **`DownFlow/Z-Image-Turbo-Fuli`** — is a PEFT LoRA adapter over Z-Image Turbo trained on the 8 highest-recurrence artists (≥21 images each, 200 images total, 3000 steps). It supports targeted generation via artist trigger-token prompts:
+Both base and Turbo artist LoRA runs were completed:
+- **`lora_artist_run01`** — Z-Image base, 1177 images, 405 artists, 2000 steps
+- **`lora_artist_turbo_run01`** — Z-Image Turbo, 200 images, 8 artists (≥21 images), 3000 steps → **`DownFlow/Z-Image-Turbo-Fuli`**
+
+Quick start with the published Turbo adapter:
 
 ```python
 from peft import PeftModel
@@ -37,10 +41,11 @@ image = pipe("portrait of 年年, long_hair, black_hair, elegant", num_inference
 ```
 
 **Key findings:**
-- Z-Image Turbo is fine-tuneable with LoRA despite being distilled (~39M trainable params, 0.3% of 12B)
-- Artist identity emerges clearly at ~1000 steps; full convergence around 2500–3000 steps
-- Scale factor `--lora_scale 2.0` improves identity recall without visible artefacts at 8-step inference
-- Abliteration (Stage 2) successfully suppresses refusal behaviour with minimal quality impact at α≤0.1
+- Both Z-Image and Z-Image Turbo are fine-tuneable with LoRA (~39M trainable params, 0.3% of 12B)
+- Base model (50-step) shows stronger identity recall at equivalent steps vs Turbo (8-step)
+- Turbo LoRA: artist identity emerges at ~1000 steps, converges around 2500–3000 steps
+- `--lora_scale 2.0` improves Turbo identity recall without visible artefacts at 8-step inference
+- Abliteration (Stage 2) suppresses refusal behaviour with minimal quality impact at α≤0.1
 
 ---
 
