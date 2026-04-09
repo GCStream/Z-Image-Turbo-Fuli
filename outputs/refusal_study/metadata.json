@@ -1,0 +1,902 @@
+[
+  {
+    "idx": 0,
+    "seed": 42,
+    "vlm_prompt": "A high-angle anime-style illustration of a young woman with long, dark blue hair and striking blue eyes, lying on a white bed with patterned bedding. She wears a red jacket open to reveal her bare chest and black thong, with one hand gripping the collar of her jacket and the other resting near her head. Her expression is calm and slightly vulnerable, with soft blushes on her cheeks. The scene is bathed in warm, natural sunlight streaming from the left, casting gentle shadows and highlighting the contours of her skin. The color palette features rich reds, deep blues, and creamy whites, evoking a cozy, intimate atmosphere. Art style blends realistic lighting with clean, expressive anime aesthetics, emphasizing soft textures and detailed facial features.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 25.8
+  },
+  {
+    "idx": 1,
+    "seed": 43,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with voluminous, flowing red hair styled in a high ponytail, featuring golden-yellow eyes and a slightly open-mouthed expression of surprise or curiosity. She is crouching on a sunlit tiled floor, wearing a black mesh halter top paired with sheer fishnet stockings and black high-heeled shoes; her arms are crossed over her chest, and she wears a black choker and wrist cuffs. The setting is an indoor space with large windows revealing a blurred cityscape in the background, casting dramatic diagonal shadows across the floor and walls. Lighting is warm and directional, emphasizing soft skin tones and fabric textures. Art style blends digital painting with realistic rendering, capturing delicate details like hair strands and light reflections.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.27
+  },
+  {
+    "idx": 2,
+    "seed": 44,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing emerald-green hair adorned with a vibrant red flower. She has large, expressive green eyes, rosy cheeks, and wears a delicate black lace choker. Her skin is glowing under warm sunlight streaming through a window behind her. She sits casually on a plush teal sofa, partially nude, wearing sheer black lace lingerie with floral patterns, thigh-high stockings, and a loose, semi-sheer black robe draped over her shoulders. Her pose is relaxed yet alluring, with one hand resting near her hip and the other supporting her weight. Sunlight filters through nearby potted plants, casting dappled shadows across her body and the room. The color palette features rich greens, soft teals, warm golds from the sunlight, and deep blacks from the lace and robe. Art style blends soft digital painting with realistic lighting and texture, evoking a serene, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.93
+  },
+  {
+    "idx": 3,
+    "seed": 45,
+    "vlm_prompt": "Anime-style illustration of a young woman with long, flowing dark blue hair and large expressive blue eyes, lying on a soft bed with pink pillows. She wears a black lace lingerie set featuring a corset-style top with ruffled sleeves and a high-waisted skirt with cutouts, revealing smooth skin. Her pose is relaxed yet alluring, with one hand resting near her chest and the other on her hip, legs slightly bent. Her expression is gentle and confident, with a soft blush on her cheeks. The scene is bathed in warm, natural lighting that highlights the texture of her hair and the delicate details of her outfit. Color palette features soft pinks, deep blues, and creamy whites, creating a dreamy and intimate atmosphere. Art style blends realistic shading with clean anime line work, emphasizing fluidity and emotional depth.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.28
+  },
+  {
+    "idx": 4,
+    "seed": 46,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, dark blue hair styled in twin tails, adorned with red ribbons and small black bows. She wears a stylish black choker and a minimal black bikini top with thin straps, revealing a smooth, curvaceous figure. Her expression is serene and confident, with soft blue eyes gazing directly at the viewer, lips slightly parted. Her arms are raised behind her head, fingers gently touching her temples, while her legs are spread apart in a relaxed pose. She lies on a plush red bedspread, surrounded by scattered items: a smartphone, a magazine, and a Blu-ray case featuring her own image. The room has warm lighting with soft shadows, creating a cozy, intimate atmosphere. The color palette features rich reds, deep blues, and warm skin tones, enhanced by subtle highlights and gradients for a polished, cinematic look. Art style blends realistic textures with clean, sharp anime line work, giving it a modern, high-quality digital art feel.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.57
+  },
+  {
+    "idx": 5,
+    "seed": 47,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with silver hair and large expressive blue eyes, lying on a bed in a cozy bedroom setting. She is nude, wearing only a black and red outfit with cat ears, and her pose is intimate and relaxed, with one hand gently touching her chest and the other resting near her hip. Her expression is soft and slightly shy, with a subtle blush on her cheeks. The lighting is warm and natural, coming from a window behind her, casting gentle shadows and highlighting the smooth texture of her skin. The color palette features soft pinks, warm skin tones, and deep blacks and reds from her clothing. The art style blends realistic textures with stylized anime aesthetics, featuring detailed shading and a dreamy atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.82
+  },
+  {
+    "idx": 6,
+    "seed": 48,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing light blue hair and large expressive purple eyes, reclining on a white bed with soft pillows. She wears a black choker with gold accents, sheer black thigh-high stockings with lace trim, and a long purple glove on her left hand. Her right hand rests near her face, while her left hand gently touches her lower abdomen. Her expression is serene and slightly shy, with a soft blush on her cheeks. The setting is a cozy bedroom with warm wooden furniture and natural sunlight streaming in from the left, casting gentle shadows and highlighting the smooth texture of her skin and hair. The color palette features soft pastels\u2014blues, pinks, whites\u2014with warm golden tones from the lighting. The art style blends realistic rendering with clean, detailed anime aesthetics, emphasizing soft curves, gentle lighting, and intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.66
+  },
+  {
+    "idx": 7,
+    "seed": 49,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young girl with long dark hair tied in twin tails, wearing a white and green patterned bikini top and matching bottoms, lying on her back on a soft yellow pillow. Her expression is playful and slightly shy, with one hand covering her eyes and the other resting near her cheek. The lighting is warm and natural, casting soft shadows and highlighting the smooth texture of her skin and the fabric of her outfit. The color palette features warm yellows, soft pinks, and muted greens, creating a cozy and intimate atmosphere. The art style blends realistic details with anime aesthetics, emphasizing gentle curves and expressive eyes.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.04
+  },
+  {
+    "idx": 8,
+    "seed": 50,
+    "vlm_prompt": "A hyper-realistic 3D render of an anime-style female character with long flowing pink hair and striking emerald green eyes, lying on a deep crimson satin surface. She wears a translucent pink lingerie set that clings to her form, emphasizing her curvaceous physique. Her skin is rendered with extreme glossiness and fluidity, capturing the texture of oil or sweat glistening across her body. Her expression is one of intense pleasure, with her mouth slightly parted and eyes wide with desire. Surrounding her are partial views of another figure\u2019s body, suggesting intimacy and connection. The lighting is dramatic and cinematic, with soft highlights reflecting off the glossy surfaces and deep shadows creating a moody, sensual atmosphere. Color palette dominated by rich burgundy, skin tones, and vibrant pink accents. Art style blends realistic 3D modeling with anime-inspired anatomy and emotional storytelling.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.24
+  },
+  {
+    "idx": 9,
+    "seed": 51,
+    "vlm_prompt": "A dynamic anime-style illustration of a young woman with dark brown hair and expressive golden eyes, winking playfully while raising one arm above her head. She wears black cat ears with white tips, a red choker, and a partially unbuttoned red skirt revealing her bare midriff and chest. Her pose is energetic and flirtatious, with a slight blush on her cheeks. The background features a soft pink polka-dot pattern. Lighting is warm and soft, highlighting her skin tones and creating gentle shadows. Color palette includes pinks, reds, and warm skin tones. Art style is clean, detailed, and reminiscent of modern digital anime art with smooth gradients and vibrant colors.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.65
+  },
+  {
+    "idx": 10,
+    "seed": 52,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long flowing orange-brown hair, golden-brown eyes, and a soft, slightly blushing expression. She is nude, wearing black thigh-high stockings with white ruffled cuffs and a black choker. Her pose is dynamic and sensual, seated with legs spread, holding a large, glossy, tan-colored phallus between her thighs. The background is a soft, seamless gradient of warm beige tones. Lighting is warm and diffused, highlighting the smooth skin texture and creating subtle shadows. Art style blends realistic rendering with elegant anime aesthetics, featuring detailed shading, soft highlights, and a focus on emotional intimacy.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 21.73
+  },
+  {
+    "idx": 11,
+    "seed": 53,
+    "vlm_prompt": "A hyper-realistic anime-style portrait of a young woman with long, flowing black hair adorned with a delicate cream-colored flower accessory, large expressive red eyes gazing directly at the viewer with a soft, slightly shy smile. She wears sheer black lace thigh-high stockings and a minimal black lace thong, exuding elegance and sensuality. Her pose is relaxed yet alluring, seated on a bed with her legs slightly apart, showcasing smooth skin and natural curves. Scattered orange rose petals float gently around her in mid-air, adding a romantic, dreamy atmosphere. The setting is a softly lit bedroom with sheer white curtains to the left, warm ambient light filtering through, and a glimpse of a white doorframe in the background. The color palette features soft skin tones, muted beige walls, and warm accents from the petals and bedding. Art style blends realistic digital painting with anime aesthetics\u2014smooth shading, detailed textures, and a cinematic composition with shallow depth of field.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.1
+  },
+  {
+    "idx": 12,
+    "seed": 54,
+    "vlm_prompt": "Anime-style illustration of a young woman with long brown hair and large expressive brown eyes, wearing a white sailor-style school uniform with a blue bow tie and dark pleated skirt. She is lying on her back on a wooden floor, legs kicked high in the air, feet prominently displayed with visible toes and soles. Her expression is one of surprise or playful shock, mouth slightly open. The scene is set in a dimly lit room with red plastic storage bins stacked against the wall on the left and another red bin in the foreground right. Warm, soft lighting highlights her skin and creates gentle shadows, emphasizing the glossy texture of her skin. Color palette features warm tones: beige wood floor, deep red bins, white shirt, and navy blue skirt. Art style is clean, detailed anime with soft shading and vibrant colors, focusing on anatomy and expression.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.73
+  },
+  {
+    "idx": 13,
+    "seed": 55,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing silver-white hair and striking blue eyes, lying on a bed with red pillows. She is partially nude, wearing a black zip-up hoodie that is unzipped to reveal her bare chest and torso, with one hand gripping the zipper. Her expression is soft and dreamy, with a gentle smile, and she gazes directly at the viewer. The lighting is warm and natural, casting soft shadows and highlighting the smooth skin tones. The color palette features rich reds, deep blacks, and warm skin tones, creating a cozy yet intimate atmosphere. The art style blends realistic textures with stylized anime aesthetics, featuring detailed shading, voluminous hair, and expressive facial features.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.93
+  },
+  {
+    "idx": 14,
+    "seed": 56,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing silver hair and small black cat ears, wearing a stylish black zip-up jacket with a blue ribbon at the collar. Her expression is soft and gentle, with wide blue eyes gazing directly at the viewer. She holds a large, realistic human penis in her right hand, positioned prominently in the foreground. The setting appears to be a sunlit room with a window showing a bright blue sky and clouds, casting warm golden light across the scene. The color palette features warm tones with soft highlights and deep shadows, emphasizing texture and realism. The art style blends digital painting with photorealistic details, capturing natural skin tones and realistic proportions.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.51
+  },
+  {
+    "idx": 15,
+    "seed": 57,
+    "vlm_prompt": "Anime-style illustration of a young woman with shoulder-length black hair and bangs, wearing a white headband. She is nude, sitting on a bed with her legs slightly apart, gazing directly at the viewer with wide, expressive eyes and a soft, slightly open-mouthed expression. Her skin is rendered with smooth, glossy texture, highlighting natural curves and soft lighting. The room has warm, natural sunlight streaming through a window in the background, casting gentle shadows across the wooden floor and furniture. A red-and-white striped rug lies beneath her, and wooden tables and cabinets frame the scene. The color palette features warm beige tones, soft browns, and highlights of sunlight, creating an intimate and serene atmosphere. Art style blends realistic anatomy with anime aesthetics, featuring detailed shading, subtle blushes, and a dreamy, ethereal quality.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.02
+  },
+  {
+    "idx": 16,
+    "seed": 58,
+    "vlm_prompt": "Anime-style illustration of a young woman with long dark blue hair and small red devil horns, wearing a black lace bra and matching panties, black thigh-high stockings, and a blue denim skirt. She lies on a bed with blue bedding, gazing directly at the viewer with a calm, slightly playful expression. Her pose is relaxed yet alluring, with one leg bent and raised, hands resting near her hips. Soft natural lighting streams in from a window behind her, casting gentle shadows and highlighting the sheen on her skin. Color palette features cool blues, warm skin tones, and subtle highlights. Art style blends realistic rendering with smooth anime aesthetics, emphasizing detailed textures like fabric and hair strands.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.63
+  },
+  {
+    "idx": 17,
+    "seed": 59,
+    "vlm_prompt": "A photorealistic anime-style illustration of a young woman with long, flowing purple hair and large cat ears adorned with white pom-poms. She lies on her side on a soft bed with light blue sheets, wearing only a black choker and a fluffy white tail that curls behind her. Her skin is glistening with natural sheen, highlighting smooth curves and soft anatomy. Her expression is serene and slightly teasing, with bright purple eyes gazing directly at the viewer. Sunlight streams through sheer curtains in the background, casting gentle shadows and creating a warm, dreamy atmosphere. The color palette features soft purples, whites, and muted blues, blending realistic textures with stylized anime aesthetics. High-detail rendering with subsurface scattering on skin, realistic fabric folds, and soft lighting effects.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.67
+  },
+  {
+    "idx": 18,
+    "seed": 60,
+    "vlm_prompt": "A photorealistic anime-style portrait of a young woman with long, sleek black hair and large expressive eyes, sitting on a plush white bed in a softly lit bedroom. She wears elegant black lace lingerie\u2014a delicate bra and matching panties\u2014paired with sheer black thigh-high stockings featuring ornate lace cuffs. Her pose is relaxed yet alluring: one leg bent with foot resting on the bed, the other extended, hands gently supporting her torso. Her expression is calm and inviting, with a subtle smile and soft blushes on her cheeks. The room features warm ambient lighting from a bedside lamp, casting gentle shadows and highlighting the texture of the fabric and skin. Color palette dominated by soft whites, deep blacks, and warm amber tones. Art style blends high-detail realism with smooth anime aesthetics, emphasizing natural skin tones, realistic fabric folds, and intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.37
+  },
+  {
+    "idx": 19,
+    "seed": 61,
+    "vlm_prompt": "Anime-style illustration of a young woman with vibrant purple hair and cat ears, lying on her side on a soft bed. She wears black lingerie with delicate straps and a bow collar, her skin glowing under warm, natural sunlight streaming through a window behind her. Her expression is calm and slightly teasing, eyes half-lidded, lips parted. Her pose is relaxed yet alluring, one arm raised behind her head, the other resting near her hip. The scene features soft pastel tones with highlights of lavender and cream, rendered in a clean, modern anime aesthetic with smooth shading and subtle blushes.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.67
+  },
+  {
+    "idx": 20,
+    "seed": 62,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with dark blue hair and fox ears, sitting outdoors under a bright red umbrella. She is topless, wearing only a white shirt that is slightly open, revealing her chest and legs. Her expression is soft and serene, with gentle blue eyes and a slight smile. She wears dangling earrings and has a red ribbon tied around her neck. The background features a sunny urban setting with buildings, power lines, and greenery under a clear blue sky with fluffy white clouds. Sunlight bathes the scene in warm tones, casting soft shadows and highlighting the smooth skin texture. The art style blends realistic lighting with clean, vibrant colors and detailed character design, evoking a modern, dreamy atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 19.8
+  },
+  {
+    "idx": 21,
+    "seed": 63,
+    "vlm_prompt": "Anime-style illustration of a young woman with long, wavy black hair and striking blue eyes, lying on her back on a bed with light blue sheets and white pillows. She wears minimal black lace lingerie, nude from the waist up, with soft blushes on her cheeks and a calm, slightly seductive expression. Her left hand gently touches her hair while her right arm rests beside her. The scene is bathed in warm, natural sunlight streaming through a window, casting gentle shadows and highlighting the smooth skin tones. Background includes a wooden headboard and bedside table with books. Art style is clean, detailed, and emotive, reminiscent of modern digital anime art with soft lighting and realistic yet stylized anatomy.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.49
+  },
+  {
+    "idx": 22,
+    "seed": 64,
+    "vlm_prompt": "A hyper-realistic anime-style portrait of a young woman with shoulder-length brown hair and expressive brown eyes, sitting nude on a soft bed in a sunlit bedroom. She wears white ribbed socks and has a gentle, slightly shy smile. Her pose is relaxed yet confident, with legs spread and one hand resting near her hip. The room features a large window with sheer curtains letting in warm golden sunlight, casting soft shadows across her skin and creating a dreamy, intimate atmosphere. The color palette is warm and natural \u2014 creamy skin tones, soft beige walls, and muted pink curtains. The art style blends realistic textures with clean, elegant anime aesthetics, emphasizing fluid anatomy and emotional depth. Lighting is directional and cinematic, highlighting contours and creating a serene, romantic mood.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 20.21
+  },
+  {
+    "idx": 23,
+    "seed": 65,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with voluminous blonde hair styled in twin tails, adorned with black cat ears and a matching bow. She wears a stylish black blouse with a high collar and a bow tie, unbuttoned to reveal a toned midriff and large, natural-looking breasts. Her skin is smooth and glowing under soft, natural lighting that highlights her curves. She lies on a white bed with pillows, legs spread wide in a confident pose, hands resting near her hips and one gently touching her chest. Her expression is serene yet alluring, with soft blue eyes and a subtle smile. The background features a cozy bedroom setting with a laptop partially visible on the left and a phone on the right. The color palette is warm and inviting, dominated by soft whites, creamy skin tones, and deep blacks from her outfit. The art style blends realistic textures with clean, expressive anime lines, capturing both intimacy and elegance.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 20.63
+  },
+  {
+    "idx": 24,
+    "seed": 66,
+    "vlm_prompt": "A top-down anime-style illustration of a young woman with voluminous, wavy light blue hair and striking purple eyes, lying on her back on a white bedspread. She wears a revealing black bodysuit with purple trim, a small golden bell necklace, and black thigh-high stockings with lace cuffs. Her arms are raised slightly, hands resting near her head, while her legs are spread wide, one clad in a pink thigh-high boot. A small amount of white fluid drips from her crotch area onto the bed. Scattered around her are colorful playing cards. Her expression is confident and slightly playful, with a soft smile. The scene is bathed in bright, natural sunlight streaming from above, casting soft shadows and highlighting the sheen on her skin and the glossy texture of her boots. The color palette features vibrant blues, purples, pinks, and whites, with a clean, polished digital art style reminiscent of high-end anime or concept art.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 21.03
+  },
+  {
+    "idx": 25,
+    "seed": 67,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a blue-haired female character with large expressive eyes and a gentle, confident smile, lying on her back on a white bed. She wears sheer black thigh-high stockings with lace trim and black gloves, her legs raised in a relaxed pose. Her chest is bare, adorned with subtle blush marks, and she wears a delicate yellow choker. Scattered around her on the bed are several pink heart-shaped objects. The room is softly lit by natural light streaming through a window with sheer curtains, casting gentle shadows. The color palette features soft pastel tones\u2014blues, whites, pinks, and skin tones\u2014with a dreamy, ethereal atmosphere. Art style blends realistic textures with anime-inspired character design, featuring smooth skin, detailed hair, and expressive eyes.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 19.55
+  },
+  {
+    "idx": 26,
+    "seed": 68,
+    "vlm_prompt": "A high-quality anime-style illustration of a young woman with vibrant blue hair and expressive blue eyes, lying on a soft white bed with pillows behind her. She wears an open royal blue silk robe with white piping and delicate lace panties, revealing a toned, curvaceous figure. Her pose is relaxed yet alluring: one hand rests behind her head, the other slightly raised near her hip, eyes gazing directly at the viewer with a gentle, confident expression. The lighting is warm and natural, casting soft shadows and highlighting skin tones and fabric textures. Color palette features cool blues, whites, and warm skin tones for contrast. Art style blends realistic digital rendering with clean, polished anime aesthetics\u2014smooth gradients, subtle shading, and detailed linework. Background includes a dark wooden headboard and hints of books or decor, creating a cozy bedroom atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 20.07
+  },
+  {
+    "idx": 27,
+    "seed": 69,
+    "vlm_prompt": "A hyper-detailed anime-style illustration of a young woman with long, flowing silver-white hair and small black horns, lying on a plush red couch. She wears a revealing black gothic-inspired outfit with intricate silver star patterns, sheer thigh-high stockings, and thigh-high boots. Her expression is soft and slightly shy, with rosy cheeks and gentle eyes. Her pose is relaxed yet alluring, legs spread wide, one hand gently touching her chest. The background features warm ambient lighting with soft shadows, creating a cozy and intimate atmosphere. Color palette: deep reds, blacks, silvers, and warm skin tones. Art style: digital painting with smooth gradients, detailed textures, and a slightly dreamy, ethereal quality.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 19.5
+  },
+  {
+    "idx": 28,
+    "seed": 70,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing silver-gray hair and striking blue eyes, reclining elegantly on a plush red velvet armchair. She wears a revealing black and white lingerie set featuring a corset-style top with delicate lace trim, a high slit skirt, and thigh-high stockings. Her pose is relaxed yet alluring, with one hand gently resting on her chest and the other near her hip, showcasing her smooth skin and confident expression. The background features soft natural light filtering through sheer curtains, casting gentle shadows and highlighting the texture of the furniture and fabric. The color palette is warm and inviting, dominated by rich reds, creamy whites, and soft skin tones, with subtle highlights enhancing the realism. The art style blends traditional anime aesthetics with modern digital painting techniques, emphasizing detailed textures, volumetric lighting, and a sense of intimacy and sophistication.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.48
+  },
+  {
+    "idx": 29,
+    "seed": 71,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing light blue hair adorned with black ribbons and small white feather-like accessories. Her pale skin glistens under warm sunlight streaming through a window on the left, casting soft shadows across her body. She is reclining on a plush red tufted bed, wearing sheer black thigh-high stockings and a loose, semi-transparent white top that reveals her toned, athletic physique. Her expression is gentle yet alluring, with large expressive blue eyes gazing directly at the viewer, lips slightly parted. The composition emphasizes her curves and sensuality, with dynamic lighting highlighting the contours of her legs and torso. Background includes soft-focus curtains, a wooden lamp post, and hints of a cozy bedroom setting. Color palette features warm golden hour tones contrasted with cool blues in the hair and shadows, creating a romantic and intimate atmosphere. Art style blends digital painting with realistic textures, capturing both the elegance of the character and the warmth of the environment.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.6
+  },
+  {
+    "idx": 30,
+    "seed": 72,
+    "vlm_prompt": "A hyper-realistic, cinematic portrait of a fierce, alien-femme fatale with large, expressive green eyes and glowing green horns, sitting cross-legged in a metallic spaceship corridor. She wears torn black denim jeans and a tattered white tank top, her skin glistening with sweat and cosmic dust. Her dark hair flows around her face, and her mouth is open in a dramatic expression as if shouting or singing. Behind her, a fiery explosion spills through the window, illuminating the starry void outside with vibrant oranges, reds, and deep blues. The scene is bathed in dramatic chiaroscuro lighting\u2014warm firelight contrasting with cool space tones. The art style blends digital painting with hyper-detailed realism, featuring sharp textures, dynamic composition, and a sense of high-stakes action.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.91
+  },
+  {
+    "idx": 31,
+    "seed": 73,
+    "vlm_prompt": "A high-quality anime-style illustration of a young woman with long, flowing black hair and large fox ears adorned with fluffy white tips. She has striking red eyes, rosy cheeks, and a slightly open-mouthed expression conveying surprise or playfulness. Her pose is relaxed yet alluring: she sits on a weathered stone ledge, leaning against a cracked concrete wall, one hand raised near her face as if shielding her eyes or gesturing thoughtfully.\n\nClothing: She wears a revealing outfit consisting of a white lace bikini bottom with a small red bow, thigh-high white stockings with delicate pink patterns, and a black off-the-shoulder blouse with puffed sleeves and ruffled cuffs. A large red bow sits at her collar, adding a touch of contrast. Her bare shoulders and torso are emphasized by the semi-nude design, highlighting her smooth skin tone.\n\nSetting: An outdoor urban environment under bright sunlight. The background features textured gray walls with visible cracks and peeling paint, suggesting an abandoned or industrial alleyway. Shadows fall sharply, indicating midday sun casting dynamic highlights and deep shadows across her body and surroundings.\n\nLighting: Strong directional sunlight creates vivid contrasts, emphasizing contours and creating a glowing effect on her skin. Highlights reflect off her hair, eyes, and clothing, enhancing depth and realism.\n\nArt Style: Digital painting with a soft, painterly aesthetic reminiscent of modern anime art. Smooth gradients, detailed textures on fabric and skin, and a vibrant color palette dominated",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 20.99
+  },
+  {
+    "idx": 32,
+    "seed": 74,
+    "vlm_prompt": "A hyper-realistic, cinematic portrait of a young woman with long, wavy dark brown hair cascading over her shoulders, wearing a black slip dress that reveals her upper body. She is lying on her side on a plush white bed, propped up on one hand, with one hand gently touching her hair. Her expression is soft and inviting, with a slight smile, eyes gazing directly at the viewer. The room is warmly lit by a vintage-style lantern hanging from the ceiling and a bedside lamp on a wooden nightstand, casting a golden glow and creating soft shadows. The background features elegant decor including a mirror, framed artwork, and sheer curtains. The color palette is rich and warm, dominated by deep browns, creamy whites, and soft golds. The art style blends photorealism with a painterly, dreamlike quality, emphasizing smooth skin textures, natural lighting, and intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.22
+  },
+  {
+    "idx": 33,
+    "seed": 75,
+    "vlm_prompt": "A hyper-detailed anime-style illustration of a slender, pale-skinned female character with long silver hair and small black cat ears, lying on her side on a white bed. She wears a black choker and a sheer black top that reveals her bare, curvaceous torso, with soft, natural lighting highlighting the smoothness of her skin. Her expression is calm and slightly seductive, with large expressive eyes gazing forward. Her legs are raised in a relaxed pose, one leg bent at the knee, emphasizing her graceful silhouette. The background features a dark wooden headboard and a wall outlet, adding depth to the cozy bedroom setting. Warm, golden-hour sunlight streams in from the left, casting gentle shadows and creating a romantic, intimate atmosphere. Color palette dominated by soft whites, warm golds, and deep blacks, with subtle highlights on the skin to enhance realism. Art style blends digital painting with anime aesthetics, featuring smooth gradients, detailed textures, and a focus on body proportions and emotional intimacy.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.41
+  },
+  {
+    "idx": 34,
+    "seed": 76,
+    "vlm_prompt": "A digital art illustration of a young woman with shoulder-length dark brown hair and soft bangs, featuring expressive brown eyes, rosy cheeks, and a gentle, inviting smile. She is topless, wearing only red thong-style underwear, seated on a bed in a warmly lit bedroom. Her pose is relaxed yet poised, with one hand resting near her hip and the other slightly raised, exuding confidence and allure. The setting includes a wooden nightstand with a lamp to her left and another lamp glowing softly to her right, casting a warm, golden-hour glow across her skin and the room. Framed artwork hangs on the walls, and white pillows are visible behind her. The color palette is dominated by warm tones\u2014creams, browns, and soft reds\u2014with highlights of golden light enhancing the texture of her skin and the ambient atmosphere. Art style blends realistic anatomy with anime-inspired aesthetics, characterized by smooth gradients, detailed shading, and a dreamy, intimate mood.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.62
+  },
+  {
+    "idx": 35,
+    "seed": 77,
+    "vlm_prompt": "A high-angle anime-style illustration of a young woman with long, flowing purple hair and pointed cat ears adorned with fluffy white tips. She lies on her back on a soft bed with lavender pillows and white linens, arms raised above her head in a relaxed pose, gazing directly at the viewer with large expressive violet eyes and a gentle, slightly shy smile. Her skin is smooth and glowing under warm, natural sunlight streaming from the left side, casting soft shadows across her body. She wears a simple black bow tie around her neck, and a small dark tail curls near her lower back. The color palette features rich purples, soft pinks, and warm whites, creating an intimate and dreamy atmosphere. Art style blends clean digital painting with subtle shading and highlights, evoking a cozy, character-driven fantasy vibe.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.93
+  },
+  {
+    "idx": 36,
+    "seed": 78,
+    "vlm_prompt": "A high-angle anime-style illustration of a young woman with short, vibrant blue hair lying on a white bed. She is topless, wearing only a light blue button-up shirt unbuttoned over her chest and a pale blue thong. Her expression is calm and slightly smiling, eyes gazing directly at the viewer. Two small black plush toys with spiky hair flank her on the bed \u2014 one to her left, one to her right. The room is softly lit with natural daylight streaming from the left, casting gentle shadows and highlighting her skin tones. The color palette is dominated by soft whites, blues, and warm skin tones, creating a serene and intimate atmosphere. Art style: clean lines, detailed shading, soft focus background, digital painting with anime aesthetics.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.69
+  },
+  {
+    "idx": 37,
+    "seed": 79,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing dark hair and striking blue eyes, lying on her back in a relaxed, intimate pose on a bed. She is nude, wearing only a delicate black lace bra and panties, with her arms raised behind her head and legs spread naturally, exuding confidence and softness. Her expression is serene and inviting, with a gentle smile, and her gaze is directed directly at the viewer. The setting is a cozy bedroom with deep blue bedding and pillows, bathed in warm, natural sunlight streaming through sheer curtains, casting soft shadows and highlighting the contours of her skin. The color palette features rich blues, warm skin tones, and soft whites, creating a harmonious and inviting atmosphere. The art style blends realistic lighting with smooth, detailed anime aesthetics, emphasizing texture, anatomy, and emotional depth.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.87
+  },
+  {
+    "idx": 38,
+    "seed": 80,
+    "vlm_prompt": "Anime-style illustration of a young woman with long silver-white hair and bright blue eyes, reclining on a soft bed with sunlight streaming through a window behind her. She wears a black zip-up jacket with white stripes on the sleeves, partially unzipped to reveal her bare torso and thighs. Her expression is gentle and slightly smiling, with rosy cheeks and soft makeup. Her pose is relaxed yet alluring, with one leg bent and raised, hands gently touching her hair. The scene is bathed in warm, golden-hour lighting, creating soft shadows and highlights on her skin. Color palette features warm tones\u2014creams, golds, and soft whites\u2014with subtle black accents from the jacket. Art style is clean, detailed anime with realistic skin textures and gentle shading.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.71
+  },
+  {
+    "idx": 39,
+    "seed": 81,
+    "vlm_prompt": "A photorealistic anime-style girl with long black hair and bangs, sitting on a bed in a softly lit bedroom. She is nude, with a gentle, slightly shy expression, eyes wide and looking forward. Her skin is smooth and glowing under warm sunlight streaming through a window to the left, casting soft shadows across her body and bed. She wears no clothing, with natural, relaxed poses\u2014hands resting on her thighs, legs spread slightly. The background features white pillows, a dark wooden headboard, and sheer curtains. Color palette: warm beige, soft pink, and natural light tones. Art style: hyper-realistic anime with detailed skin textures, realistic lighting, and cinematic composition.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.54
+  },
+  {
+    "idx": 40,
+    "seed": 82,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing pastel pink hair and expressive, soft pink eyes, reclining sensually on a soft, rumpled white bedspread in a dimly lit forest setting. She is nude, with a gentle, dreamy smile and one hand holding a red flower stem near her lips, the other resting beside her. Her body is angled slightly toward the viewer, showcasing smooth skin tones under warm, ethereal lighting that highlights curves and creates gentle shadows. The background features blurred green foliage and dark blue tones, adding depth and mystery. A sheer white fabric drapes around her, enhancing the romantic and intimate atmosphere. The color palette is dominated by soft pinks, whites, and deep blues, with a dreamy, painterly aesthetic reminiscent of high-end digital art and soft-focus photography.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.74
+  },
+  {
+    "idx": 41,
+    "seed": 83,
+    "vlm_prompt": "Anime-style illustration of a young woman with lavender-purple hair and cat ears, wearing a blue sailor-style top with a bow, white thigh-high stockings, and minimal underwear. She is reclining on a plush red velvet armchair, legs spread wide, hands gently touching her chest and lap. Her expression is soft and slightly shy, with pink eyes and a small blush. The scene is set indoors near a window with green curtains, bathed in warm natural light that casts gentle shadows and highlights her skin tones. Color palette features soft pinks, purples, and warm reds, with subtle sparkles and glowing effects. Art style is clean, detailed, and emotive, reminiscent of high-end anime art by artists like Yumiko Kuroda or Makoto Shinkai.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.36
+  },
+  {
+    "idx": 42,
+    "seed": 84,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing pastel pink hair adorned with a single vibrant pink flower, striking a playful yet seductive pose with both hands raised in a peace sign. She wears a black lace-trimmed bralette and white thigh-high stockings with ruffled cuffs, her expression a mix of shy embarrassment and playful confidence, eyes wide with a soft blush. The scene is set in a sunlit bedroom with large windows casting warm, golden light across the room, creating a dreamy, intimate atmosphere. In the foreground, two hands hold smartphones capturing the moment, their screens glowing with the image. The color palette features soft pinks, creamy whites, and warm yellows, rendered in a detailed, semi-realistic anime art style with smooth gradients and delicate shading.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.5
+  },
+  {
+    "idx": 43,
+    "seed": 85,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, sleek black hair and striking crimson eyes, wearing cat ears and a tail with a red bow. She is dressed in a dark purple school uniform jacket, partially unbuttoned to reveal a white undershirt and minimal white bikini bottoms. Her hands gently pull the jacket open, exposing her midriff and cleavage. She wears thigh-high black stockings and a small silver stud earring. Her expression is soft and slightly shy, with a subtle blush on her cheeks. The background features a warm-toned brick wall with soft bokeh lights and floating pink hearts. Lighting is soft and flattering, highlighting her curves and skin texture. Art style blends detailed realism with vibrant anime aesthetics, featuring smooth gradients, expressive eyes, and dynamic composition.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.84
+  },
+  {
+    "idx": 44,
+    "seed": 86,
+    "vlm_prompt": "Three anime-style female characters in a dynamic, intimate pose, surrounded by dramatic red curtains. The central figure is nude, holding a blue electric massager to her lower body, with white and blue maid-style stockings and a blue bow collar visible. Her expression is one of intense pleasure, eyes wide, tears of joy streaming down her face. Flanking her are two other women: one with orange hair and bunny ears on the left, wearing a blue bikini top and thigh-highs, smiling broadly with an open mouth; the other with pink hair and a black ribbon in her hair on the right, also smiling joyfully with her mouth open, holding the massager\u2019s handle. All three are bathed in warm, golden lighting that highlights their skin tones and creates sparkling effects around the massager and droplets of fluid. The background features rich, deep red velvet curtains, enhancing the theatrical and sensual atmosphere. Art style is hyper-detailed anime with soft shading, vibrant colors, and expressive character designs.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 21.96
+  },
+  {
+    "idx": 45,
+    "seed": 87,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young female catgirl character with golden-brown fur, large expressive amber eyes, and a playful, flushed expression. She has short layered hair with white ribbons tied in bows, and prominent cat ears with white inner fur. Her tail curls behind her, and she wears a blue-and-white striped maid-style bra top with frills and a matching blue choker with a gold pendant. Her skin is glowing with sweat and moisture, and she\u2019s mid-action, gripping her thighs while being penetrated by a large, muscular male figure whose hands are visible holding her blue thigh-high stockings adorned with white daisy patterns. The scene is set on a soft lavender bed with purple bedding, bathed in warm, intimate studio lighting that highlights the sheen on her skin and the texture of the fabric. The color palette features soft purples, blues, skin tones, and warm highlights, rendered in a detailed, semi-realistic anime art style with dynamic shading and fluid anatomy.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 19.64
+  },
+  {
+    "idx": 46,
+    "seed": 88,
+    "vlm_prompt": "A photorealistic anime-style illustration of a young woman with long, flowing pink hair adorned with a red flower and a small black crown. She wears a white short-sleeved school uniform shirt tied with a red and navy striped tie, paired with a navy blue pleated skirt pulled up to reveal her midriff and sheer black lace underwear. Her expression is confident and slightly playful, with one hand gripping the hem of her skirt while the other rests on her hip. The setting is a sunlit classroom with a green chalkboard on the left and a window letting in bright natural light from the right, casting soft shadows across her skin. The color palette features warm tones\u2014creams, soft pinks, and navy blues\u2014with highlights of sunlight creating a dreamy, high-contrast atmosphere. Art style blends digital painting with realistic textures, emphasizing smooth skin tones, detailed fabric folds, and voluminous hair strands under natural lighting.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.0
+  },
+  {
+    "idx": 47,
+    "seed": 89,
+    "vlm_prompt": "A hyper-realistic AI image recreation prompt:\n\nSubject: A young anime-style female character with vibrant blue hair and small red horns, lying on a messy bed. She has expressive purple eyes and a soft, confident smile. Her skin is glowing under warm sunlight streaming through a window.\n\nPhysical Appearance: Her skin is smooth and radiant, with natural blush on her cheeks. Her posture is relaxed yet alluring, with one hand gently resting on her chest and the other near her thigh.\n\nClothing: She wears long, elegant purple gloves that extend to her wrists, paired with sheer black stockings and delicate pink lace lingerie. A small portion of a white dress or blouse is visible at the neckline.\n\nPose: Lying on her back, she reclines slightly, exuding confidence and intimacy. Her legs are crossed, and her expression conveys a mix of vulnerability and allure.\n\nSetting: A cozy bedroom with rumpled bedding in shades of red, gray, and white. A window lets in bright natural light, casting soft shadows and highlighting her features. The room feels intimate and personal.\n\nLighting: Warm, golden sunlight filters through the window, creating a soft glow on her face and body. Shadows are minimal, emphasizing her curves and the texture of her skin.\n\nColor Palette: Dominated by warm tones\u2014golden yellows, soft pinks, and deep purples\u2014with contrasting cool blues in her hair.\n\nArt Style: High-fidelity 3D rendering with",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 20.82
+  },
+  {
+    "idx": 48,
+    "seed": 90,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with lavender hair styled in twin buns with cat ears, large expressive blue eyes, and a soft, gentle smile. She wears a black choker necklace and sheer black thigh-high stockings that extend to her ankles. Her body is partially nude, showcasing smooth skin tones, with her hands gently clasped near her lap. She is lying on a neatly made bed with white pillows and light blue sheets, surrounded by a cozy bedroom setting including wooden nightstands, a vintage analog clock, and a floor lamp casting warm ambient light. The scene is bathed in soft, natural sunlight streaming from the right, creating gentle shadows and highlighting the contours of her form. The color palette features warm wood tones, soft whites, and muted purples, blending realism with stylized anime aesthetics. Art style: photorealistic digital painting with subtle anime-inspired details, high detail, soft lighting, and intimate composition.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.99
+  },
+  {
+    "idx": 49,
+    "seed": 91,
+    "vlm_prompt": "---\n\n**Recreation Prompt:**\n\nA hyper-realistic anime-style portrait of a young woman with voluminous, flowing platinum-white hair cascading over her shoulders and back. Her face is illuminated by soft, natural sunlight filtering through water droplets on a red and white striped bedspread, creating a warm, glowing effect on her cheeks and forehead. She has striking blue eyes with subtle red blush marks near her temples, conveying a sense of gentle surprise or tenderness. Her expression is soft and intimate, with slightly parted lips and a relaxed, vulnerable gaze.\n\nShe is lying on her back, partially undressed, wearing a stylish black high-collared top with white accents that reveals her cleavage. The fabric appears to be made of a lightweight, semi-sheer material, catching the light and emphasizing her curves. Her pose is relaxed yet deliberate, with one arm slightly raised and the other resting beside her, suggesting a moment of quiet intimacy or rest.\n\nThe background features a blurred water surface with gentle ripples, hinting at a lakeside or poolside setting. The overall color palette is dominated by cool tones of silver, white, and soft blue, contrasted with warm highlights of skin tones and the red-and-white pattern of the bedding. The art style blends traditional anime aesthetics with modern digital realism, featuring detailed shading, realistic textures, and a dreamy, ethereal atmosphere. Lighting is cinematic and directional, enhancing depth and mood.\n\n---",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 20.98
+  },
+  {
+    "idx": 50,
+    "seed": 92,
+    "vlm_prompt": "Two anime-style young women with long black hair and red eyes kneel intimately in front of a warm, crackling campfire. Both wear minimal black lingerie\u2014thigh-high stockings and delicate lace panties\u2014and their skin glistens under the golden hour sunlight. Their expressions are soft and affectionate, eyes locked in tender gaze, hands gently touching each other\u2019s arms and chests. The setting is a rustic outdoor stone patio with low brick fire pits; one large fire burns brightly behind them, casting warm orange glow and shadows across the scene. Background features blurred greenery, wooden steps, and hints of a stone wall, creating depth. Color palette dominated by warm ambers, deep browns, and soft skin tones, with cool blues in shadows enhancing contrast. Art style: high-detail anime illustration with realistic lighting, volumetric glow, and smooth skin textures\u2014evoking a cozy, romantic atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.14
+  },
+  {
+    "idx": 51,
+    "seed": 93,
+    "vlm_prompt": "A hyperrealistic AI image of a young woman with long, wavy dark brown hair cascading over her shoulders, featuring large expressive eyes, rosy cheeks, and a soft, gentle smile. She is nude, kneeling on a bed with white linens, her posture relaxed yet poised, hands resting lightly on the mattress beside her. The setting is a warmly lit bedroom at night, with a classic wooden bedside table to her left holding a glowing table lamp that casts a soft, golden-hued light across her skin and the room. The background includes a dark wooden headboard and a partially visible framed painting on the wall. The color palette is dominated by warm tones\u2014creams, soft browns, and golden yellows\u2014from the lamp, contrasted with cool whites from the bedding and shadows. The art style blends realistic textures with smooth, painterly rendering, reminiscent of high-end digital illustration with subtle cinematic lighting and depth of field.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.76
+  },
+  {
+    "idx": 52,
+    "seed": 94,
+    "vlm_prompt": "A hyper-realistic, anime-style illustration of a young woman with vibrant blue hair and striking purple eyes, reclining on a white bed. She wears black thigh-high stockings and black gloves, with her hands raised behind her head in a relaxed pose. Her expression is soft and content, with a gentle smile. The scene is intimate and warm, featuring scattered pink and white condoms around her on the bed. Soft, natural lighting highlights her skin tones and hair, creating a dreamy, cozy atmosphere. The color palette is dominated by warm beiges, soft whites, and rich blues, with subtle highlights and shadows for depth. Art style blends realistic textures with clean, detailed anime aesthetics\u2014smooth skin, expressive eyes, and dynamic composition.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.0
+  },
+  {
+    "idx": 53,
+    "seed": 95,
+    "vlm_prompt": "A vibrant anime-style illustration of a young woman with short, playful pink hair tipped in electric blue, lying on a sun-drenched grassy field. She wears a light gray cropped t-shirt that\u2019s lifted to reveal her cleavage, a black pleated skirt, white knee-high socks, and dark sneakers with blue accents. A black choker with a silver ring adorns her neck. Her expression is innocent and slightly surprised, eyes wide and looking upward. To her right rests a classic black-and-white soccer ball. The scene is bathed in warm golden sunlight filtering through green foliage, casting dappled shadows. Soft pastel flowers dot the grass. Art style: hyper-detailed, cel-shaded anime with soft lighting and vibrant color palette.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.63
+  },
+  {
+    "idx": 54,
+    "seed": 96,
+    "vlm_prompt": "A high-resolution anime-style illustration of a young woman with long, dark hair styled in two braided pigtails, wearing a delicate purple lace lingerie set. She is kneeling on a white bed, gazing directly at the viewer with large, expressive purple eyes and soft, rosy cheeks. Her pose is relaxed yet alluring, with one hand resting gently on her thigh and the other near her knee. The setting is a sunlit bedroom with natural light streaming through a window behind her, casting warm highlights across her skin and the room. A wooden dresser with a framed picture and small decorative items sits to her left, and a plush white pillow rests against the headboard. The color palette features soft pastels, warm wood tones, and vibrant purple accents, creating an intimate and dreamy atmosphere. The art style blends realistic lighting with clean, elegant anime aesthetics, emphasizing smooth skin textures and detailed fabric folds.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.12
+  },
+  {
+    "idx": 55,
+    "seed": 97,
+    "vlm_prompt": "Anime-style character portrait of a blue-haired girl with purple eyes and small horns, lying on her back on a white bed with pillows, wearing sheer black thigh-high stockings with lace trim and a brown choker necklace, arms raised behind her head, smiling gently, surrounded by scattered pink and blue candy wrappers, soft natural lighting, warm skin tones, hyper-detailed, 8k resolution, clean background, dreamy atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 15.24
+  },
+  {
+    "idx": 56,
+    "seed": 98,
+    "vlm_prompt": "A hyper-detailed anime-style illustration of a young woman with vibrant cyan-blue hair and small red devil horns, lying on a plush white bed with wooden headboard. She wears black thigh-high stockings with lace trim, a dark choker, and sheer black gloves. Her expression is playful and confident, eyes half-closed as she rests her hands behind her head. Her body is partially nude, emphasizing soft curves and natural skin tones. Pink rectangular objects (likely phone cases) are scattered around her on the bed. The scene is bathed in warm, golden-hour sunlight streaming from the left, casting soft shadows and highlighting the texture of her hair and skin. Color palette features soft whites, deep blues, rich browns, and warm golds. Art style blends realistic lighting with polished anime aesthetics, featuring smooth gradients, voluminous hair, and expressive eyes.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.14
+  },
+  {
+    "idx": 57,
+    "seed": 99,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long flowing pink hair lying on a soft white bed, wearing a slightly unbuttoned light blue and white school uniform shirt that reveals her bare midriff, stomach, and pubic area. Her legs are spread slightly, and she is looking directly at the viewer with a soft, slightly shy expression, one hand behind her head and the other resting near her hip. The lighting is warm and natural, coming from the upper left, casting gentle shadows and highlighting the smooth curves of her skin. The color palette features soft pastel tones: pastels of pink, white, and blue dominate, with subtle skin tones and dark navy pants visible beneath the bed. The art style is clean, detailed, and emotive, with smooth gradients and soft focus in the background to emphasize the subject. A wooden bedside table with two smartphones sits to the left, adding a modern touch. The overall mood is intimate, serene, and visually balanced, with attention to anatomical detail and realistic textures.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.6
+  },
+  {
+    "idx": 58,
+    "seed": 100,
+    "vlm_prompt": "Anime-style illustration of a young woman with voluminous, wavy light blue hair and striking blue eyes, lying on a white bed with a dark pillow behind her head. She wears an unbuttoned navy blue school uniform jacket, partially revealing her bare torso, and light blue lace underwear. Her expression is soft and slightly shy, with a gentle smile, hands resting near her chest. Sunlight streams in from the right, casting warm highlights on her skin and hair, creating soft shadows. Background includes a wooden nightstand with a small potted plant and book, suggesting a cozy bedroom setting. Color palette features soft pastels\u2014blues, whites, and warm beige tones\u2014with clean lines and smooth shading typical of high-quality anime art.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.68
+  },
+  {
+    "idx": 59,
+    "seed": 101,
+    "vlm_prompt": "Anime-style illustration of a blonde woman with blue eyes lying on her back on a blue bed, wearing a black off-shoulder blouse with a high collar and tied waist, her hands gently holding her hair, soft blush on her cheeks, relaxed and intimate pose, natural daylight streaming from the left casting gentle shadows, warm color palette dominated by soft blues, blacks, and skin tones, detailed realistic anime art style with smooth shading and vibrant colors.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 15.0
+  },
+  {
+    "idx": 60,
+    "seed": 102,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long silver hair, lying on a red bed with blue pillows. She wears a black corset top, sheer black thigh-high stockings, and a black choker with red accents. Her expression is calm and slightly curious, with large expressive eyes and soft blushes. Her body is angled diagonally, showcasing her curves and the detailed rendering of her skin. The lighting is soft and warm, casting gentle shadows and highlighting the texture of her clothing and skin. The background features blurred bedroom elements, adding depth without distraction. Art style blends realistic textures with elegant anime aesthetics, emphasizing natural proportions and intimate composition.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.58
+  },
+  {
+    "idx": 61,
+    "seed": 103,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing silver-white hair tied in a high ponytail, her face turned slightly toward the viewer with wide, expressive blue eyes and a soft, open-mouthed expression. She is nude, wearing only a sheer, translucent white bodysuit that clings to her form, accentuating her curvaceous figure. Her skin is glistening with moisture or sweat, particularly around her hips and thighs, where droplets and streams of clear liquid are captured mid-splash, adding dynamic motion and texture. She is positioned on her knees, leaning forward with one arm raised, exuding confidence and sensuality. The background features soft, diffused warm lighting with golden-hued curtains or fabric drapes, creating a dreamy, intimate atmosphere. The color palette is dominated by warm peachy tones, creamy whites, and subtle skin highlights, with sharp, detailed rendering emphasizing the sheen on her skin and the fluidity of the liquid. Art style blends realistic anatomy with stylized anime aesthetics\u2014smooth gradients, volumetric lighting, and expressive character design\u2014evoking a high-end digital art piece.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 19.31
+  },
+  {
+    "idx": 62,
+    "seed": 104,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing platinum blonde hair and large expressive blue eyes, sitting on a sunlit wooden bed. She is nude, wearing only delicate pink lace-trimmed thong underwear, with soft blushes on her cheeks and a gentle, inviting smile. Her pose is relaxed yet alluring, with one hand resting on the bed and legs spread slightly, revealing a small puddle of white liquid on the white sheets. The room is warmly lit by natural sunlight streaming through sheer curtains, casting soft shadows and highlighting the smooth skin tones. Background features a dark wood dresser with framed art, a lamp, and a window with sheer drapes. Art style: 3D-rendered anime aesthetic with soft lighting, detailed textures, and a dreamy, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.59
+  },
+  {
+    "idx": 63,
+    "seed": 105,
+    "vlm_prompt": "A hyper-realistic AI image recreation prompt:\n\nSubject: A young anime-style female character with long, flowing lavender hair and striking blue eyes, lying on her back on a white bedsheet. She is nude, with a relaxed yet confident pose\u2014legs slightly bent, one hand resting near her hip, the other extended toward the viewer. Her expression is calm and inviting, with a soft, gentle smile.\n\nClothing: No visible clothing; skin is exposed, highlighting smooth, glowing tones with natural shading and highlights.\n\nSetting: A cozy bedroom interior, featuring a dark wooden headboard behind her, a wooden dresser to the left with books and small items, and soft natural light filtering through a window (implied by shadows and brightness).\n\nLighting: Warm, diffused natural sunlight from the right side, casting gentle shadows and creating a soft glow on her skin, enhancing the realistic texture and depth.\n\nColor Palette: Soft pastel tones\u2014lavender hair, white bedding, muted wood tones, and warm beige skin tones\u2014with subtle highlights for realism.\n\nArt Style: High-fidelity anime aesthetic with realistic rendering, blending digital art techniques with photorealism\u2014smooth skin textures, detailed hair strands, and soft lighting effects.\n\nAdditional details: Subtle depth of field, slight motion blur in the background to emphasize the subject, and a dreamy, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 20.79
+  },
+  {
+    "idx": 64,
+    "seed": 106,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing cyan hair and striking blue eyes, lying on a soft white bed in a sunlit bedroom. She wears a loose off-white blouse tied at the chest, revealing her toned midriff, and black lace lingerie with a small bow on the waistband. Her expression is serene and slightly playful, with a gentle smile as she gazes directly at the viewer. Sunlight streams through a window behind her, casting warm golden highlights across her skin and the bedding, creating soft shadows and enhancing the texture of her hair and fabric. The room features wooden furniture and sheer curtains, contributing to a cozy, intimate atmosphere. The color palette blends cool blues and cyans with warm yellows and whites, evoking a dreamy, ethereal mood. Art style: digital painting with soft brushstrokes, high detail, realistic lighting, and a gentle, romantic anime aesthetic.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.54
+  },
+  {
+    "idx": 65,
+    "seed": 107,
+    "vlm_prompt": "A detailed anime-style illustration of a young woman with vibrant blue hair and expressive purple eyes, lying on a soft bed with white pillows. She wears black lace stockings, black gloves, and a blue top with gold accents, her chest partially exposed. Her hands rest gently on her hips, and she has a warm, inviting smile. The setting is a cozy bedroom with red bedding and natural sunlight streaming through sheer curtains, casting soft shadows. The color palette features warm tones of red, white, and blue, with highlights of gold and black. The art style is hyper-detailed, with smooth skin textures, realistic lighting, and a romantic, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.43
+  },
+  {
+    "idx": 66,
+    "seed": 108,
+    "vlm_prompt": "Hyper-realistic anime-style illustration of a slender, pale-skinned female character with long silver-white hair tied in a high ponytail, featuring a single visible red eye and a small black mole near her left cheek. She is depicted from behind, nude, in a dynamic pose leaning over a kitchen counter, with her left hand resting on the edge and right hand gently touching her hip. Her back muscles are subtly defined, and a long black tail curves elegantly around her lower back. Two human hands frame her from the front, one supporting her lower back and the other near her hips, creating a sense of intimacy. The setting is a warm-toned kitchen with wooden countertops, a blue wall in the background, and various breakfast items arranged artfully: a jar labeled \"HAM & CHOCOLATE\" with dripping chocolate, a bowl of cracked eggs, sliced bananas, strawberries, a bunch of yellow bananas, and a plate of folded pancakes. Lighting is soft and directional, casting gentle shadows and highlighting the smooth texture of her skin and the glossy surfaces of the food. Color palette features warm browns, creamy whites, vibrant reds, and golden yellows, evoking a cozy, inviting atmosphere. Art style blends detailed realism with clean anime line work, emphasizing anatomical precision and emotional subtlety.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 21.0
+  },
+  {
+    "idx": 67,
+    "seed": 109,
+    "vlm_prompt": "A hyper-detailed anime-style illustration of a young woman with vibrant dual-colored hair\u2014vivid teal and deep crimson\u2014styled in twin high ponytails adorned with white bows and decorative rings. Her face is flushed with rosy cheeks, eyes gently closed in a serene, blissful expression, and lips softly curved into a shy smile. She stands nude, her skin rendered with glossy, wet sheen, emphasizing smooth curves and anatomical perfection. Her arms are raised above her head, hands clasped behind her back, conveying a sense of vulnerability and intimacy. The background features a modern bathroom setting: a white sink with a visible drain, a blurred mirror reflecting another nude figure lying on a bed, and soft ambient lighting that casts gentle highlights across her body. The color palette blends warm skin tones with cool teal and red accents, creating a harmonious yet intimate atmosphere. Art style mimics high-end digital art with clean lines, volumetric lighting, and a focus on realistic texture and emotional depth.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 21.72
+  },
+  {
+    "idx": 68,
+    "seed": 110,
+    "vlm_prompt": "Anime-style illustration of a slender, pale-skinned female character with long white hair and large expressive golden eyes. She wears a black cat-eared headband and a small black eye patch over her left eye. Her body is curvaceous and toned, depicted in a dynamic, low-sitting pose on a soft lavender bedspread. Her right hand grips a thick, metallic silver tail looped around her waist, while her left arm rests near her hip. Her expression is confident yet slightly vulnerable, with a subtle blush on her cheeks. The background is minimalist white, emphasizing the subject. Lighting is soft and diffused, highlighting her skin\u2019s smooth texture and creating gentle shadows. Color palette features warm skin tones, cool lavender bedding, and metallic silver accents. Art style blends realistic anatomy with anime aesthetics, featuring smooth shading, volumetric lighting, and a clean, modern digital illustration look.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.8
+  },
+  {
+    "idx": 69,
+    "seed": 111,
+    "vlm_prompt": "Anime-style portrait of a young woman with shoulder-length dark blue hair and bangs, wearing a small red strawberry hair clip. She is nude, sitting in a kneeling position with one leg extended forward, holding a translucent pink latex condom in her right hand. Her expression is soft and slightly smiling, eyes half-lidded, with subtle blush on her cheeks. The lighting is warm and golden, casting soft shadows and highlighting the smooth texture of her skin. Background is softly blurred with warm beige tones, suggesting an intimate indoor setting. Art style is clean, detailed, and realistic with a focus on anatomical accuracy and gentle shading.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.56
+  },
+  {
+    "idx": 70,
+    "seed": 112,
+    "vlm_prompt": "Anime-style illustration of a young woman with vibrant red hair tied in pigtails, adorned with a small black bat-like accessory. She has large expressive pink eyes and a gentle, slightly blushing smile, with subtle sweat droplets on her cheeks. Her skin is smooth and glowing under soft, warm lighting. She wears a black choker with heart-shaped jewelry and light blue bikini bottoms. Her pose is intimate and relaxed, lying down with one arm raised holding a black smartphone, while her other hand rests gently on her hip. Multiple colorful heart-shaped piercings adorn her chest and abdomen. The background features a soft pink surface with white polka dots and a hint of purple fabric, creating a dreamy, romantic atmosphere. Art style is clean, detailed, and emotionally expressive, with smooth gradients and vibrant color palette dominated by pinks, purples, and skin tones.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 21.99
+  },
+  {
+    "idx": 71,
+    "seed": 113,
+    "vlm_prompt": "A hyper-detailed anime-style illustration of a young woman with silver hair tied in twin tails and a black headband, golden eyes, and an expressive open-mouthed look, surrounded by multiple muscular male figures embracing her from all sides. She is nude, wearing only black thigh-high stockings, with her legs spread wide and black boots resting on her knees. The scene is set against a soft pink background with floating white hearts, evoking a romantic yet intense atmosphere. Lighting is warm and glowing, highlighting her skin tones and the glossy textures of her body and clothing. Art style blends smooth digital painting with bold outlines and vibrant color gradients, capturing a dynamic, intimate moment with emotional depth and cinematic composition.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.72
+  },
+  {
+    "idx": 72,
+    "seed": 114,
+    "vlm_prompt": "A highly detailed anime-style illustration featuring four female characters in a close, intimate, and slightly provocative pose on a soft, white surface\u2014likely a bed or couch. The central figure is a large, voluptuous woman with short dark hair adorned with a black crown-like headpiece and a pearl necklace; she has glowing red eyes and a serene, slightly smiling expression, her hands gently resting on her chest. Flanking her are three other women: to her left, a blonde woman with golden eyes and a ponytail, looking down with a calm expression; behind her, a blue-haired woman with glowing purple horns and intense blue eyes, leaning forward with a focused gaze; and to her right, a pink-haired woman with cat ears and red eyes, peeking in with a curious and happy look. All four are nude, emphasizing their curves and skin tones. The lighting is soft and warm, casting gentle shadows and highlighting the smooth textures of their skin. The color palette is dominated by soft pinks, warm skin tones, and vibrant accents of gold, blue, and pink. The art style is clean, expressive, with bold outlines and vibrant shading typical of modern anime illustration. In the background, a small inset frame shows a minimalist figure with red cheeks and a heart, adding a subtle narrative element. Text at the bottom reads \u201cGORGEDUS MUSHROOM. 2020.5.19.\u201d \u2014 rendered in a playful, handwritten font.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 19.21
+  },
+  {
+    "idx": 73,
+    "seed": 115,
+    "vlm_prompt": "A hyper-detailed anime-style illustration of a voluptuous blonde girl with long flowing hair and cat ears, lying on her back on a blue medical examination table in a sterile, futuristic medical room. She wears a black leather corset, thigh-high stockings, and red wrist cuffs, with a black tail attached to her lower back. Her legs are elevated and secured with red metal restraints, connected by a long black rod extending toward the viewer. She has a serene, slightly flushed expression with closed eyes and a single tear rolling down her cheek, conveying vulnerability and pleasure. The lighting is dramatic and cinematic, with soft warm highlights on her skin contrasting against cool blue ambient tones of the room. Background features a glowing holographic medical monitor, shelves with medical equipment, and a clinical atmosphere. Art style: realistic anime with smooth skin textures, volumetric lighting, and detailed fabric folds.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 10.85
+  },
+  {
+    "idx": 74,
+    "seed": 116,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a blonde female character with twin ponytails, wearing a black and white maid outfit with a corset top and thigh-high stockings. She is kneeling on her knees, her body partially exposed, with wet skin texture and glistening highlights suggesting moisture or sweat. Her expression is joyful and playful, with one eye closed in a wink, mouth open in a happy shout, and rosy cheeks. She is being held up by two arms from below, her legs spread wide. The background features a softly lit stained-glass window with blue and gold patterns, creating a dreamy, magical atmosphere. Warm ambient lighting bathes the scene, with soft bokeh effects and floating particles for depth. Color palette: soft pastel purples, blues, and warm skin tones. Art style: digital painting with smooth gradients, detailed anatomy, and a romantic, ethereal mood.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.63
+  },
+  {
+    "idx": 75,
+    "seed": 117,
+    "vlm_prompt": "A hyper-detailed anime-style illustration of a dual-averse character in a dynamic, intimate pose. The central figure is a young woman with pale lavender hair, large expressive green eyes, and pointed white wolf ears adorned with a golden circlet. She wears a black fur collar with glowing purple runes across her chest, thigh-high black fur boots with matching purple rune patterns, and a choker with a silver buckle. Her skin is smooth and toned, featuring a small purple rune on her stomach. Behind her stands a large, menacing boar-headed beast with dark fur, sharp horns, glowing yellow eyes, and jagged purple markings on its face and body. The woman kneels beside the beast, one hand resting on its head, while the other hangs by her side. Her expression is serene yet slightly melancholic, with a single tear glistening on her cheek. The scene is set against a soft, ethereal blue-white background with subtle light flares and misty textures. Lighting is soft and diffused, highlighting the curves of her form and the textures of the fur and fur clothing. Color palette features soft pinks, purples, blacks, and whites with vivid green eyes. Art style blends realistic anatomy with stylized anime aesthetics, rich in detail and emotional depth.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 12.05
+  },
+  {
+    "idx": 76,
+    "seed": 118,
+    "vlm_prompt": "A close-up anime-style illustration of a young woman with soft lavender hair and expressive purple eyes, lying on her back in a lush green meadow bathed in warm golden sunlight. She wears a fluffy purple tail with a large tuft at the end, and a matching purple bow around her neck. Her skin is glowing with a healthy, dewy sheen, and her expression is serene yet slightly playful, with one hand gently resting near her chest. The background features blurred grass and dappled light, creating a dreamy, natural atmosphere. Art style is highly detailed, with smooth gradients, soft lighting, and vibrant yet harmonious color palette dominated by pinks, purples, and greens.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 8.98
+  },
+  {
+    "idx": 77,
+    "seed": 119,
+    "vlm_prompt": "A full-body anime-style illustration of a young woman with short, wavy white hair and pointed black devil horns, gazing back over her shoulder with a shy, blushing expression. Her eyes are large and pink with a glowing heart-shaped highlight, framed by long eyelashes and soft blush on her cheeks. She wears no clothing, revealing a slender, curvaceous figure with smooth, pale skin and subtle anatomical details. Her left hand gently touches her chest, fingers slightly curled, while her right arm rests behind her back. A long, black, flexible tail with a leaf-shaped tip curves elegantly around her lower body, ending in a sharp point. Several small, bright red hearts float around her head, adding a whimsical, affectionate atmosphere. The background is a clean, solid white, emphasizing the subject. Lighting is soft and diffused, highlighting the contours of her body and hair with gentle shadows. Art style is clean, detailed, and stylized with smooth gradients and expressive character design typical of high-quality anime art.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 11.17
+  },
+  {
+    "idx": 78,
+    "seed": 120,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing platinum blonde hair and large, expressive teal eyes, lying on her back on a patterned rug. She wears a white button-down shirt unbuttoned over sheer lace lingerie, with blue satin ribbons tied around her torso and legs, one hand gently touching her face. Her expression is soft and dreamy, with a slight blush on her cheeks. The scene is bathed in warm, golden sunlight streaming through a window, casting gentle shadows and highlighting the glossy texture of her skin and the fabric. The color palette features soft pastels\u2014blues, whites, creams, and warm golds\u2014with a painterly, semi-realistic anime aesthetic reminiscent of high-end manga art by artists like Makoto Shinkai or Hayao Miyazaki.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.44
+  },
+  {
+    "idx": 79,
+    "seed": 121,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a voluptuous, nude female character with vibrant reddish-orange hair tied in a high ponytail, standing on a bright blue volleyball court under a vivid sky. She is captured mid-motion, arms raised above her head, holding a tennis racket in her right hand, with a playful and confident expression on her face. Her skin is rendered with soft, glowing highlights and subtle shadows, emphasizing the curves of her body. The background features a clear blue sky with fluffy white clouds, scattered soap bubbles, and sparkling star-like effects. The volleyball net stretches across the frame, adding depth to the scene. The color palette is dominated by fresh blues, warm pinks, and bright whites, creating a summery, energetic atmosphere. The art style blends realistic lighting with smooth, polished anime aesthetics, featuring detailed textures on the skin and vibrant, saturated colors throughout.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 10.5
+  },
+  {
+    "idx": 80,
+    "seed": 122,
+    "vlm_prompt": "Anime-style illustration of a young woman with dark purple hair styled in twin braids, each adorned with red ties. She has large expressive purple eyes and rosy cheeks, wearing a delicate purple lace bra and matching panties. Her pose is seated on a bed with white linens, knees bent and hands resting gently on her thighs. Soft, natural sunlight streams through a window behind her, casting gentle shadows and highlighting her skin tones. The background features a wooden headboard and a white pillow, creating a cozy bedroom setting. Color palette consists of warm skin tones, soft purples, and muted wood browns. Art style blends realistic anatomy with anime aesthetics, featuring smooth shading, detailed textures, and a dreamy, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.11
+  },
+  {
+    "idx": 81,
+    "seed": 123,
+    "vlm_prompt": "A photorealistic anime-style illustration of a young woman with long, wavy pink hair and large expressive purple eyes, reclining on a dark brown leather couch in a sunlit living room. She is nude, with soft natural lighting highlighting her skin tones and casting gentle shadows across her body. Her expression is calm and slightly curious, with a subtle smile. In her right hand, she holds a large red paintbrush with a black handle; in her left, a pair of silver scissors. The background features a window with sheer curtains letting in warm sunlight, a framed picture on the wall, and plush cushions. The color palette is dominated by warm earthy tones\u2014browns, soft pinks, and golden sunlight\u2014with a dreamy, painterly aesthetic reminiscent of high-end anime art.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.28
+  },
+  {
+    "idx": 82,
+    "seed": 124,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, wavy brown hair and striking blue eyes, lying on her back on a cozy wooden bed with soft gray pillows. She wears a dark, semi-sheer black blouse with a high collar and a white undershirt peeking out, paired with minimal black lingerie that accentuates her curves. Her expression is serene yet alluring, with a slight blush on her cheeks and a gentle smile as she looks directly at the viewer. Her pose is relaxed yet confident, with one arm raised behind her head and the other resting near her hip, showcasing her smooth, glowing skin. The lighting is warm and natural, casting soft shadows and highlighting the texture of her hair and clothing. The color palette features muted earth tones\u2014browns, beiges, and soft grays\u2014combined with subtle highlights of skin tone and deep blacks for contrast. The art style blends realistic textures with stylized anime aesthetics, featuring detailed shading, volumetric lighting, and a dreamy, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 10.49
+  },
+  {
+    "idx": 83,
+    "seed": 125,
+    "vlm_prompt": "A high-angle anime-style illustration of a young woman with long, wavy brown hair adorned with a delicate pink flower accessory, lying nude on a white bedspread with her arms raised behind her head. Her expression is soft and slightly surprised, with rosy cheeks and large expressive eyes. She wears sheer white thigh-high stockings with lace trim at the top. The setting is a cozy bedroom with wooden bed frames and soft pillows, bathed in warm, natural sunlight streaming from the left, casting gentle shadows across her skin and bedding. The color palette features soft pastels\u2014creams, whites, light browns, and subtle pinks\u2014with smooth shading and vibrant highlights to emphasize the glowing skin tone. Art style is clean, detailed, and romantic, reminiscent of modern digital art with a focus on realistic anatomy and emotional intimacy.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.42
+  },
+  {
+    "idx": 84,
+    "seed": 126,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing blonde hair and striking blue eyes, sitting on a white bed with a dark wooden headboard. She is nude, with a gentle, confident smile, her hands resting near her hips and one hand lightly touching her thigh. Soft, natural sunlight streams through a window, casting warm highlights on her skin and creating gentle shadows. The color palette features soft pastels\u2014creams, warm beiges, and muted blues\u2014with subtle blush tones on her cheeks. The art style blends clean, detailed anime line work with photorealistic textures, emphasizing smooth skin, realistic lighting, and intimate, serene atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 8.99
+  },
+  {
+    "idx": 85,
+    "seed": 127,
+    "vlm_prompt": "A serene, sunlit scene featuring a young woman with long, flowing golden hair and large expressive blue eyes, seated gracefully on a wooden bench surrounded by lush green foliage. She is nude, with soft, natural lighting highlighting her smooth skin and gentle posture. Her expression is calm and contemplative, with a slight smile. The setting appears to be a tranquil garden or greenhouse, with large leaves framing her and a window in the background letting in warm, diffused sunlight. The color palette is dominated by earthy greens, warm browns, and soft skin tones, creating a harmonious and peaceful atmosphere. The art style is realistic with a gentle, dreamy aesthetic, emphasizing natural beauty and tranquility.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.09
+  },
+  {
+    "idx": 86,
+    "seed": 128,
+    "vlm_prompt": "Anime-style illustration of a young woman with vibrant red hair styled in twin tails, adorned with white feathered accessories. She wears a slightly unbuttoned white blouse with a black choker, revealing her bare chest and thighs. Her expression is soft and slightly surprised, eyes wide as she gazes forward. She sits on a dark couch with legs spread wide, hands gently touching her lower body, conveying intimacy and vulnerability. The setting is a cozy bedroom with a window letting in natural light, casting soft shadows across her skin. Color palette features warm skin tones, muted reds, and whites, with subtle blue tones from the window light. Art style blends clean anime lines with realistic shading and texture, emphasizing smooth skin and gentle lighting.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.33
+  },
+  {
+    "idx": 87,
+    "seed": 129,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a blue-haired female character with pointed ears and purple eyes, lying on a white bed with pillows. She wears black lace thigh-high stockings, black gloves, and a dark blue long-sleeved top with sheer panels. Her hands are raised behind her head, one hand resting near her groin, fingers slightly splayed. Her expression is confident and slightly playful, with a soft smile. Sunlight streams in from the right, casting warm highlights on her skin and hair, creating soft shadows and enhancing the texture of her skin and fabric. The background features a wooden headboard and white bedding, with natural daylight illuminating the scene. Art style: digital painting with high detail, realistic lighting, soft edges, and vibrant color palette dominated by blues, whites, and warm golden tones.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.56
+  },
+  {
+    "idx": 88,
+    "seed": 130,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, soft pink hair and large expressive blue eyes, wearing a black bow on her head. She is depicted in a semi-nude pose, standing slightly bent forward with hands gripping the waistband of her white underwear, conveying a sense of vulnerability and curiosity. Her expression is one of gentle surprise or mild embarrassment, with wide eyes and a slightly open mouth. The setting is a bright, sunlit classroom with wooden desks and chairs, large windows in the background allowing natural daylight to flood the scene, casting soft shadows and highlighting the smooth texture of her skin. The color palette features warm tones\u2014pinks, creams, and golden yellows from the sunlight\u2014with clean lines and detailed shading typical of high-quality anime art. Art style: realistic anime with soft lighting, volumetric highlights, and a focus on emotional expression and realistic anatomy.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.89
+  },
+  {
+    "idx": 89,
+    "seed": 131,
+    "vlm_prompt": "A hyper-realistic anime-style portrait of a young woman with long flowing black hair and expressive green eyes, adorned with fluffy white cat ears and delicate pink flower clips. She wears a sleek, form-fitting black leather top with a high collar, paired with sheer black gloves that extend to her wrists. Her legs are clad in thigh-high white stockings and glossy black lace-up boots, creating a striking contrast. She sits casually on a soft white surface, surrounded by blooming cherry blossoms in soft pink hues, with petals gently falling around her. The lighting is warm and natural, casting gentle shadows and highlighting the textures of her skin, fabric, and fur. The overall color palette blends deep blacks, vibrant greens, and pastel pinks, evoking a serene yet alluring atmosphere. Art style: digital painting with smooth gradients, detailed shading, and a dreamy, ethereal quality reminiscent of high-end anime illustrations.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 10.84
+  },
+  {
+    "idx": 90,
+    "seed": 132,
+    "vlm_prompt": "A hyper-realistic, anime-inspired 3D render of a young woman with vibrant pink twin-tails and expressive red eyes, sitting confidently in a black office chair. She wears a loose, oversized pink button-up shirt unbuttoned to reveal her bare, curvaceous torso and legs, with a soft, natural blush on her cheeks. Her expression is calm and slightly teasing, with a gentle smile. The setting is a bright, sunlit modern office with white blinds, a wooden desk, a black computer monitor, and a potted plant in the background. Warm, golden-hour sunlight streams through the blinds, casting soft shadows and highlighting the smooth skin tones. Color palette: pastel pinks, warm yellows, and deep blacks. Art style: 3D anime aesthetic with realistic textures, soft lighting, and detailed character design.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 9.69
+  },
+  {
+    "idx": 91,
+    "seed": 133,
+    "vlm_prompt": "A photorealistic anime-style illustration of a young woman with short, dark, wavy hair and large expressive green eyes, gazing softly at the viewer with a gentle, slightly shy smile. She stands in a sunlit room near a large window, wearing a sheer, translucent white button-down shirt that is unbuttoned and draped loosely over her bare torso, revealing her full, curvaceous figure. Her skin is glowing with natural warmth under the bright daylight streaming through the window. The background features a bright blue sky with fluffy white clouds and a distant landscape of green fields and buildings, suggesting a peaceful coastal or suburban setting. Soft natural lighting creates gentle shadows and highlights on her form, emphasizing smooth curves and realistic anatomy. The color palette is dominated by warm tones\u2014creams, soft whites, and skin tones\u2014with vibrant blues and greens from the outside world. The art style blends digital illustration with hyper-realistic textures, using soft focus and shallow depth of field to draw attention to the subject while maintaining a dreamy, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.11
+  },
+  {
+    "idx": 92,
+    "seed": 134,
+    "vlm_prompt": "A vibrant anime-style illustration of a young girl with short, pastel-pink hair featuring blue tips, sitting on lush green grass surrounded by soccer balls. She wears a white short-sleeved jersey with pink trim, lifted slightly to reveal her cleavage, paired with a black ruffled skirt and white knee-high socks with pink and blue stripes. Her expression is surprised and playful, eyes wide and mouth slightly open. She wears a black choker with a small pendant. The scene is bathed in warm, golden sunlight filtering through trees, casting soft shadows and highlighting the glossy texture of the grass and her skin. The color palette is bright and cheerful: vivid greens, pinks, whites, and soft yellows. Art style is clean, detailed, and highly polished with smooth gradients and expressive character design typical of modern anime art.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.08
+  },
+  {
+    "idx": 93,
+    "seed": 135,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a young woman with long, flowing pastel pink hair and large expressive blue eyes, lying on a soft white bed with wooden headboard and nightstand visible in the background. She is nude, glistening with sweat and moisture, with rosy cheeks and freckles across her face. Her expression is one of surprise or vulnerability, with wide eyes and slightly parted lips. Her hands are gently placed near her groin area, where a white, viscous liquid\u2014resembling milk or cream\u2014is dripping from her vulva onto the bed, pooling around her feet. The lighting is warm and natural, casting soft highlights on her skin and creating a dreamy, intimate atmosphere. Color palette features soft pinks, creams, and warm skin tones with subtle shadows for depth. Art style blends realistic textures with stylized anime aesthetics, featuring smooth skin rendering, detailed fabric folds, and a cinematic composition.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.65
+  },
+  {
+    "idx": 94,
+    "seed": 136,
+    "vlm_prompt": "A dynamic anime-style illustration of a red-haired female character in a crouching pose, rendered with high-fidelity 3D rendering techniques and soft, dreamy lighting. She has vibrant red hair styled in twin tails, with long flowing strands cascading down her back, and striking golden-yellow eyes that convey an expression of surprise or intensity. Her skin is smooth and luminous, highlighted by dramatic chiaroscuro lighting that emphasizes her curves and creates deep shadows. She wears a revealing black outfit featuring a corset-style top with cutouts, thigh-high black stockings with straps, and high-heeled boots with red soles. Her pose is confident and alluring, with one hand resting on her hip and the other near her thigh, exuding confidence and grace. The background is a minimalist, misty gray space with subtle floating particles, enhancing the ethereal atmosphere. The color palette consists of warm reds, blacks, and soft whites, creating a striking contrast. The art style blends traditional anime aesthetics with modern 3D realism, featuring detailed textures, realistic fabric folds, and a polished, cinematic finish.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 19.16
+  },
+  {
+    "idx": 95,
+    "seed": 137,
+    "vlm_prompt": "A full-body anime-style illustration of a young woman with short, wavy silver hair adorned with a single vibrant red rose on the left side of her head. Her large, expressive green eyes gaze back over her shoulder with a soft, confident smile, cheeks flushed with natural pink. She is nude, showcasing a curvaceous and voluptuous figure with a prominent rear end, arms relaxed at her sides, and a gentle, inviting posture. She wears no clothing, emphasizing her natural beauty and form. The setting is a serene, sun-drenched outdoor garden or courtyard featuring traditional wooden architecture, lush greenery, potted flowers, and a tranquil water feature in the background. Warm, golden sunlight filters through the foliage, casting soft highlights and gentle shadows across her skin, enhancing the realistic yet stylized rendering. The color palette is dominated by warm earth tones, lush greens, and soft skin tones, creating a harmonious and inviting atmosphere. The art style blends realistic textures with anime-inspired detailing, featuring smooth gradients, detailed shading, and a dreamy, ethereal quality reminiscent of high-quality digital art.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.63
+  },
+  {
+    "idx": 96,
+    "seed": 138,
+    "vlm_prompt": "A hyper-realistic anime-style illustration of a blue-haired fantasy warrior character with small red horns and purple eyes, lying on a white bed with a soft pillow behind her head. She wears a blue sleeveless top with gold trim, black thigh-high stockings with purple lace trim, and a small gold choker. Her body is partially nude, with visible skin texture and subtle sheen from soft lighting. A pink cylindrical object rests between her legs, surrounded by scattered pink sachets. Her expression is serene and slightly smiling, eyes half-closed in relaxation. The scene is bathed in warm, natural sunlight streaming from the left, casting gentle shadows and highlighting the contours of her form. The color palette features soft whites, blues, purples, and pinks, creating a dreamy, intimate atmosphere. The art style blends detailed realism with elegant anime aesthetics, emphasizing smooth skin, voluminous hair, and atmospheric depth.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.1
+  },
+  {
+    "idx": 97,
+    "seed": 139,
+    "vlm_prompt": "Anime-style portrait of a young woman with long, wavy dark purple hair and large expressive eyes, wearing black bunny ears and a partially unbuttoned light gray shirt revealing her bare midriff and upper chest. She lies on a blue bed with white sheets, propped up on one elbow, gazing directly at the viewer with a soft, confident smile. Her skin is rendered with realistic lighting and subtle blushes, emphasizing a toned, athletic build. She wears delicate white lace underwear. The setting includes a wooden headboard, a dark pillow, a framed photo on a bedside table with a lamp, and natural daylight streaming in from the left, casting soft shadows and highlighting the contours of her body. Color palette features cool blues, warm wood tones, and soft skin tones. Art style is clean, detailed anime illustration with painterly shading and vibrant yet balanced colors.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 16.95
+  },
+  {
+    "idx": 98,
+    "seed": 140,
+    "vlm_prompt": "A full-body anime-style illustration of a young woman with long black hair tied in a high ponytail, standing outdoors against a weathered gray door with a red wooden panel to the left. She is nude, wearing only a dark open jacket draped loosely over her shoulders, revealing her bare torso and legs. Her pose is dynamic: both hands raised near her head, fingers curled inward as if adjusting her hair or shielding her face, while her left leg is slightly bent and her right leg extended forward, with a prominent erect penis visible between her legs. Her expression is calm and slightly defiant, eyes half-lidded and gazing directly at the viewer. The lighting is bright and natural, casting strong shadows on the wall behind her, suggesting midday sun. The color palette features muted grays, deep blacks, and warm skin tones, with subtle highlights on the hair and clothing folds. Art style is clean, detailed, and slightly hyper-realistic with soft shading and volumetric lighting, evoking a modern digital art aesthetic reminiscent of high-end anime illustrations.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 18.86
+  },
+  {
+    "idx": 99,
+    "seed": 141,
+    "vlm_prompt": "A soft-focus anime-style illustration of a young woman with long, wavy platinum blonde hair and large, expressive blue eyes, lying on her back in a sunlit bedroom. She wears delicate, light pink lace lingerie with a small black bow at the back, her skin glowing under warm, golden sunlight streaming through a window behind her. Her arms are raised behind her head, fingers gently touching her hair, and she gazes directly at the viewer with a calm, serene expression. The room features a dark wooden nightstand with a vintage lamp, a small vase, and a book, all bathed in natural light. The color palette is dominated by warm tones\u2014creams, soft pinks, and golden yellows\u2014with subtle shadows adding depth. The art style blends realistic lighting with stylized anime aesthetics, featuring smooth skin textures, soft edges, and a dreamy, intimate atmosphere.",
+    "vlm_status": "ok",
+    "base_status": "ok",
+    "turbo_status": "ok",
+    "elapsed_s": 17.43
+  }
+]

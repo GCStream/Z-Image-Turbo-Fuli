@@ -1,0 +1,38 @@
+# Z-Image Nitro — Python dependencies
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# diffusers must be installed from source for ZImagePipeline support:
+#   pip install git+https://github.com/huggingface/diffusers
+#
+# For ROCm (AMD GPU, as used in this repo):
+#   torch is installed via ROCm wheel — see pytorch.org/get-started for your platform.
+#   The pinned version below is for ROCm 6.2.
+
+# ── core inference ─────────────────────────────────────────────────────────────
+# diffusers installed from git (see above)
+torch==2.5.1          # +rocm6.2 on this machine; use cu124 build on CUDA
+safetensors==0.7.0
+accelerate>=1.0.0
+
+# ── image processing ──────────────────────────────────────────────────────────
+Pillow==12.2.0
+
+# ── data loading ──────────────────────────────────────────────────────────────
+pyarrow==23.0.1
+datasets>=3.0.0
+
+# ── analysis ──────────────────────────────────────────────────────────────────
+numpy>=1.26.0
+
+# ── future: Stage 2 abliteration ──────────────────────────────────────────────
+# No extra deps; uses torch + safetensors directly.
+
+# ── future: Stage 3 fine-tuning ───────────────────────────────────────────────
+# peft>=0.13.0          # LoRA
+# bitsandbytes>=0.44.0  # quantization
+# wandb>=0.18.0         # experiment tracking
+
+# ── future: Stage 4 editing ───────────────────────────────────────────────────
+# No extra deps beyond diffusers; Z-Image-Edit uses the same ZImagePipeline.

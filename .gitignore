@@ -1,0 +1,79 @@
+# ── secrets ───────────────────────────────────────────────────────────────────
+.env
+*.env
+secrets.json
+lora_image_raw/
+finetune_dataset/
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+*.whl
+.venv/
+venv/
+env/
+.tox/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── model weights & caches ───────────────────────────────────────────────────
+# Never commit raw safetensors / pytorch checkpoints to the repo.
+# They live in HF_HOME (see .env.example). Use huggingface-cli or hf download.
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.trt
+
+# HF / torch caches that may appear locally
+hf_cache/
+.cache/
+
+# ── training artefacts (Stage 3) ─────────────────────────────────────────────
+# LoRA / full fine-tune checkpoints go here; commit only configs, not weights
+stage3_finetune/checkpoints/
+stage3_finetune/runs/
+stage3_finetune/wandb/
+
+# ── dataset images (commit metadata.jsonl but not the images themselves) ──────
+finetune_dataset/images/
+lora_dataset/images/
+
+# ── abliteration working files (Stage 2) ─────────────────────────────────────
+stage2_abliteration/probes/
+stage2_abliteration/steered_weights/
+
+# ── editing outputs (Stage 4) ────────────────────────────────────────────────
+stage4_editing/outputs/
+
+# ── generation outputs ────────────────────────────────────────────────────────
+# Individual per-pair images are large; track summary + metadata in git.
+# To version the full pair set, consider git-lfs or an external artifact store.
+outputs/pairs/
+outputs/eval_lora/panels/
+outputs/eval_fullft/panels/
+outputs/eval_steered/panels/
+outputs_log.txt
+outputs/*.txt
+*.log
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+assets/fonts/*.ttc
+assets/fonts/*.ttf
