@@ -7,6 +7,8 @@
   <a href="https://huggingface.co/Tongyi-MAI/Z-Image"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Base-Z--Image-orange" alt="Base Model"></a>
   <img src="https://img.shields.io/badge/org-DownFlow%20%E4%B8%8B%E6%B5%81%E7%A7%91%E6%8A%80-red" alt="DownFlow">
   <img src="https://img.shields.io/badge/April-2026-lightgrey" alt="Date">
+  <br><br>
+  <a href="http://oneclickamd.ai/github/GCStream/Z-Image-Turbo-Fuli/blob/main/notebooks/zimage_fuli_turbo.ipynb"><img src="https://img.shields.io/badge/▶%20Run%20on-AMD%20OnClick%20AI-ED1C24?logo=amd&logoColor=white" alt="Run on AMD OnClick AI"></a>
 </p>
 
 ---
