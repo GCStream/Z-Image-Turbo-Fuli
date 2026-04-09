@@ -1,4 +1,4 @@
-# Z-Image Nitro — Python dependencies
+# Z-Image × Fuliji — Python dependencies
 #
 # Install:
 #   pip install -r requirements.txt
@@ -9,30 +9,32 @@
 # For ROCm (AMD GPU, as used in this repo):
 #   torch is installed via ROCm wheel — see pytorch.org/get-started for your platform.
 #   The pinned version below is for ROCm 6.2.
+#   On CUDA: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
 
 # ── core inference ─────────────────────────────────────────────────────────────
 # diffusers installed from git (see above)
-torch==2.5.1          # +rocm6.2 on this machine; use cu124 build on CUDA
-safetensors==0.7.0
+torch>=2.5.1          # +rocm6.2 on this machine; use cu124 build on CUDA
+torchvision>=0.20.0   # used for image transforms in training scripts
+safetensors>=0.7.0
 accelerate>=1.0.0
+transformers>=5.0.0   # text encoder (Qwen3), tokeniser
+
+# ── LoRA / fine-tuning ────────────────────────────────────────────────────────
+peft>=0.18.0          # LoRA injection and PEFT adapter save/load
+
+# ── HuggingFace Hub ───────────────────────────────────────────────────────────
+huggingface_hub>=1.9.0
+python-dotenv>=1.0.0  # loads HF_TOKEN from .env
 
 # ── image processing ──────────────────────────────────────────────────────────
-Pillow==12.2.0
+Pillow>=12.0.0
 
-# ── data loading ──────────────────────────────────────────────────────────────
-pyarrow==23.0.1
+# ── data loading & analysis ───────────────────────────────────────────────────
+pyarrow>=23.0.0
 datasets>=3.0.0
-
-# ── analysis ──────────────────────────────────────────────────────────────────
+pandas>=2.0.0
 numpy>=1.26.0
 
-# ── future: Stage 2 abliteration ──────────────────────────────────────────────
-# No extra deps; uses torch + safetensors directly.
+# ── visualisation (loss curves, eval panels) ──────────────────────────────────
+matplotlib>=3.9.0
 
-# ── future: Stage 3 fine-tuning ───────────────────────────────────────────────
-# peft>=0.13.0          # LoRA
-# bitsandbytes>=0.44.0  # quantization
-# wandb>=0.18.0         # experiment tracking
-
-# ── future: Stage 4 editing ───────────────────────────────────────────────────
-# No extra deps beyond diffusers; Z-Image-Edit uses the same ZImagePipeline.
