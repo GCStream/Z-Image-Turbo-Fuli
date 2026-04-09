@@ -1,6 +1,6 @@
 # Z-Image Family: A Quantitative Architecture Analysis and Side-by-Side Benchmark
 
-> **Z-Image Team** · Tongyi-MAI · April 2026  
+> **GCStream** · DownStreamTech · 下流科技 · April 2026  
 > Models: [`Tongyi-MAI/Z-Image`](https://huggingface.co/Tongyi-MAI/Z-Image) · [`Tongyi-MAI/Z-Image-Turbo`](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)  
 > Code: [`stage1_analysis/compare_models.py`](stage1_analysis/compare_models.py) · [`stage1_analysis/generate_comparisons.py`](stage1_analysis/generate_comparisons.py)
 
@@ -294,6 +294,13 @@ As a pre-abliteration baseline, we ran `stage2_abliteration/refusal_study.py` on
 
 Outputs: [`outputs/refusal_study/summary_grid.jpg`](outputs/refusal_study/summary_grid.jpg) · [`outputs/refusal_study/metadata.json`](outputs/refusal_study/metadata.json)
 
+**Sample panels (captioned prompt → Z-Image output):**
+
+| | | |
+|---|---|---|
+| ![](outputs/refusal_study/panels/000_panel.jpg) | ![](outputs/refusal_study/panels/002_panel.jpg) | ![](outputs/refusal_study/panels/004_panel.jpg) |
+| ![](outputs/refusal_study/panels/006_panel.jpg) | ![](outputs/refusal_study/panels/008_panel.jpg) | ![](outputs/refusal_study/panels/010_panel.jpg) |
+
 ### 5.6 Abliteration Pipeline
 
 The Stage 2 pipeline consists of three scripts:
@@ -311,6 +318,19 @@ find_directions.py  ──►  nsfw_vs_sfw.pt  ──►  steer_weights.py  ─�
 | `find_directions.py` | Hook all 30 layers; collect activations; compute mean-diff unit direction per layer | `directions/nsfw_vs_sfw.pt` |
 | `steer_weights.py` | Apply $W' = W - \alpha\,\mathbf{d}(\mathbf{d}^\top W)$ to `to_out.0` and `w2` in target layers; save full pipeline | `$TRAINING_SCRATCH/z-image-abliterated/` |
 | `eval_steered.py` | Apply directions in-memory; generate 30 pairs (NSFW + SFW) original vs. steered; assemble panels + metadata | `outputs/eval_steered/` |
+
+**Alpha sweep** (α=0.0 → fully abliterated; showing effect on a representative prompt):
+
+| α=0.00 | α=0.05 | α=0.10 | α=0.20 | α=0.40 |
+|---|---|---|---|---|
+| ![](outputs/alpha_sweep/alpha_0.00.jpg) | ![](outputs/alpha_sweep/alpha_0.05.jpg) | ![](outputs/alpha_sweep/alpha_0.10.jpg) | ![](outputs/alpha_sweep/alpha_0.20.jpg) | ![](outputs/alpha_sweep/alpha_0.40.jpg) |
+
+**Before / after steering panels** (original base → steered):
+
+| | | |
+|---|---|---|
+| ![](outputs/eval_steered/panels/000_panel.jpg) | ![](outputs/eval_steered/panels/007_panel.jpg) | ![](outputs/eval_steered/panels/014_panel.jpg) |
+| ![](outputs/eval_steered/panels/021_panel.jpg) | ![](outputs/eval_steered/panels/028_panel.jpg) | |
 
 ---
 
@@ -344,6 +364,12 @@ Evaluation (25 prompts — 15 NSFW + 10 SFW, 3 columns: base / +LoRA / Turbo+LoR
 | Inference overhead | ~30% slower than base due to PEFT runtime hooks |
 
 Representative panels: [`outputs/eval_lora/panels/`](outputs/eval_lora/panels/) · Summary: [`outputs/eval_lora/summary_grid.jpg`](outputs/eval_lora/summary_grid.jpg)
+
+**Sample panels (Base | +LoRA | Turbo+LoRA):**
+
+| | | |
+|---|---|---|
+| ![](outputs/eval_lora/panels/000_panel.jpg) | ![](outputs/eval_lora/panels/006_panel.jpg) | ![](outputs/eval_lora/panels/012_panel.jpg) |
 
 ### 6.2 Full Fine-tune (Stage 3B)
 
@@ -402,6 +428,15 @@ pipe.transformer = ZImageTransformer2DModel.from_pretrained(
 pipe = pipe.to("cuda")
 # No adapter overhead — runs at base model inference speed
 ```
+
+**Eval panels** (Base | Fine-tuned | Turbo, 4 columns, 512×512):
+
+Summary: [`outputs/eval_fullft/summary_grid.jpg`](outputs/eval_fullft/summary_grid.jpg)
+
+| | | | |
+|---|---|---|---|
+| ![](outputs/eval_fullft/panels/panel_000.jpg) | ![](outputs/eval_fullft/panels/panel_001.jpg) | ![](outputs/eval_fullft/panels/panel_002.jpg) | ![](outputs/eval_fullft/panels/panel_003.jpg) |
+| ![](outputs/eval_fullft/panels/panel_004.jpg) | ![](outputs/eval_fullft/panels/panel_005.jpg) | ![](outputs/eval_fullft/panels/panel_006.jpg) | ![](outputs/eval_fullft/panels/panel_007.jpg) |
 
 ### 6.3 Dataset Pipeline (Stage 3C)
 
@@ -467,15 +502,31 @@ To teach Z-Image Turbo to reproduce specific artist identities via trigger-token
 
 ![Training loss](outputs/lora_artist_turbo_run01_loss.png)
 
-**Eval panels** (Original photo | Z-Image Turbo base | LoRA, 512×512, seed=42):
+**Final eval — 8 trained artists** (Original photo | Z-Image Turbo base | LoRA, 512×512):
 
-| Checkpoint | Output dir |
-|---|---|
-| Step 500 EMA | [`outputs/eval_lora_artist_turbo_step500/`](outputs/eval_lora_artist_turbo_step500/) |
-| Step 1000 EMA | [`outputs/eval_lora_artist_turbo_step1000/`](outputs/eval_lora_artist_turbo_step1000/) |
-| Step 1500 EMA | [`outputs/eval_lora_artist_turbo_step1500/`](outputs/eval_lora_artist_turbo_step1500/) |
-| Step 2500 EMA | [`outputs/eval_lora_artist_turbo_step2500/`](outputs/eval_lora_artist_turbo_step2500/) |
-| Final (3000 EMA) | [`outputs/eval_lora_artist_turbo_final/`](outputs/eval_lora_artist_turbo_final/) |
+| 萌芽儿o0 | 年年 | 封疆疆v | 焖焖碳 |
+|---|---|---|---|
+| ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_000.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_001.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_002.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_003.jpg) |
+
+| 星之迟迟 | 蠢沫沫 | 雨波HaneAme | 清水由乃 |
+|---|---|---|---|
+| ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_004.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_005.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_006.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_007.jpg) |
+
+**SFW anchor checks** (confirms no catastrophic forgetting):
+
+| | | |
+|---|---|---|
+| ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_008.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_009.jpg) | ![](outputs/eval_lora_artist_turbo_final_trained/panels/panel_010.jpg) |
+
+**Checkpoint progression eval dirs** (Original photo | Z-Image Turbo base | LoRA, 512×512, seed=42):
+
+| Checkpoint | Output dir | Summary grid |
+|---|---|---|
+| Step 500 EMA | [`outputs/eval_lora_artist_turbo_step500/`](outputs/eval_lora_artist_turbo_step500/) | ![](outputs/eval_lora_artist_turbo_step500/summary_grid.jpg) |
+| Step 1000 EMA | [`outputs/eval_lora_artist_turbo_step1000/`](outputs/eval_lora_artist_turbo_step1000/) | ![](outputs/eval_lora_artist_turbo_step1000/summary_grid.jpg) |
+| Step 1500 EMA | [`outputs/eval_lora_artist_turbo_step1500/`](outputs/eval_lora_artist_turbo_step1500/) | ![](outputs/eval_lora_artist_turbo_step1500/summary_grid.jpg) |
+| Step 2500 EMA | [`outputs/eval_lora_artist_turbo_step2500/`](outputs/eval_lora_artist_turbo_step2500/) | ![](outputs/eval_lora_artist_turbo_step2500/summary_grid.jpg) |
+| Final (3000 EMA) | [`outputs/eval_lora_artist_turbo_final/`](outputs/eval_lora_artist_turbo_final/) | ![](outputs/eval_lora_artist_turbo_final/summary_grid.jpg) |
 
 **LoRA scale experiments** — at default scale=1.0 (alpha/rank=1) differences are subtle on Turbo; scale=2.0 amplifies without artefacts:
 
