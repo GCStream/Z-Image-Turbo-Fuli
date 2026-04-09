@@ -430,6 +430,77 @@ The training data was built from 277 proprietary images in `lora_image_raw/` usi
 
 ---
 
+### 6.4 Artist Identity LoRA (Stage 3D)
+
+To teach Z-Image Turbo to reproduce specific artist identities via trigger-token captions, we trained a rank-32 LoRA on 200 images across 8 high-recurrence artists (≥21 images each) from `fuliji_dataset.parquet`.
+
+**Dataset (filtered):**
+
+| Artist | Images |
+|---|---|
+| 萌芽儿o0 | 30 |
+| 年年 | 26 |
+| 封疆疆v | 26 |
+| 焖焖碳 | 26 |
+| 星之迟迟 | 25 |
+| 蠢沫沫 | 23 |
+| 雨波HaneAme | 23 |
+| 清水由乃 | 21 |
+
+**Training configuration (`lora_artist_turbo_run01`):**
+
+| Setting | Value |
+|---|---|
+| Base model | Z-Image Turbo |
+| Dataset | 200 images, 8 artists (`--min_count 21`) |
+| LoRA rank / alpha | 32 / 32 |
+| Target modules | `to_q`, `to_k`, `to_v`, `w1`, `w2`, `w3` |
+| Trainable params | ~39M |
+| Steps | 3000 (~60 epochs over 200 images, eff_batch=4) |
+| LR | 1e-4 cosine, 100-step warmup |
+| Regularisation | reg_ratio=0.25 (reg dataset interleaved), flip_aug, caption_dropout=0.05 |
+| EMA | decay=0.9999 |
+| Timestep bias | 1.2 (biases towards high-noise steps) |
+| Final smooth loss | ~0.44 |
+
+**Training loss curve:**
+
+![Training loss](outputs/lora_artist_turbo_run01_loss.png)
+
+**Eval panels** (Original photo | Z-Image Turbo base | LoRA, 512×512, seed=42):
+
+| Checkpoint | Output dir |
+|---|---|
+| Step 500 EMA | [`outputs/eval_lora_artist_turbo_step500/`](outputs/eval_lora_artist_turbo_step500/) |
+| Step 1000 EMA | [`outputs/eval_lora_artist_turbo_step1000/`](outputs/eval_lora_artist_turbo_step1000/) |
+| Step 1500 EMA | [`outputs/eval_lora_artist_turbo_step1500/`](outputs/eval_lora_artist_turbo_step1500/) |
+| Step 2500 EMA | [`outputs/eval_lora_artist_turbo_step2500/`](outputs/eval_lora_artist_turbo_step2500/) |
+| Final (3000 EMA) | [`outputs/eval_lora_artist_turbo_final/`](outputs/eval_lora_artist_turbo_final/) |
+
+**LoRA scale experiments** — at default scale=1.0 (alpha/rank=1) differences are subtle on Turbo; scale=2.0 amplifies without artefacts:
+
+```bash
+python3 stage3_finetune/eval_lora_artist.py \
+    --turbo \
+    --adapter /scratch/training/lora_artist_turbo_run01/final_adapter \
+    --lora_scale 2.0 --res 512
+```
+
+**Loading at inference:**
+```python
+from peft import PeftModel
+pipe = ZImagePipeline.from_pretrained(MODEL_TURBO, torch_dtype=torch.bfloat16)
+pipe.transformer = PeftModel.from_pretrained(
+    pipe.transformer,
+    "/scratch/training/lora_artist_turbo_run01/final_adapter",
+    is_trainable=False,
+)
+pipe = pipe.to("cuda")
+image = pipe("portrait of 年年, long_hair, black_hair, elegant", num_inference_steps=8).images[0]
+```
+
+---
+
 ### 5.7 Planned Future Work
 
 #### Stage 4 — Editing Support
