@@ -1,30 +1,41 @@
 # Z-Image × Fuliji — Python dependencies
 #
-# Install:
-#   pip install -r requirements.txt
+# ── 1. Install PyTorch first (platform-specific) ──────────────────────────────
 #
-# diffusers must be installed from source for ZImagePipeline support:
+#   ROCm 6.4 (AMD GPU):
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/rocm6.4
+#
+#   ROCm 6.2 (as used in this repo):
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/rocm6.2
+#
+#   CUDA 12.4 (NVIDIA GPU):
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+#
+#   CPU only (testing / no GPU):
+#     pip install torch torchvision
+#
+# ── 2. Install diffusers from source (ZImagePipeline not yet on PyPI) ─────────
+#
 #   pip install git+https://github.com/huggingface/diffusers
 #
-# For ROCm (AMD GPU, as used in this repo):
-#   torch is installed via ROCm wheel — see pytorch.org/get-started for your platform.
-#   The pinned version below is for ROCm 6.2.
-#   On CUDA: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# ── 3. Install the rest ───────────────────────────────────────────────────────
+#
+#   pip install -r requirements.txt
 
-# ── core inference ─────────────────────────────────────────────────────────────
-# diffusers installed from git (see above)
-torch>=2.5.1          # +rocm6.2 on this machine; use cu124 build on CUDA
-torchvision>=0.20.0   # used for image transforms in training scripts
+# torch and torchvision intentionally omitted — install via step 1 above
+# diffusers intentionally omitted — install via step 2 above
+
+# ── core ──────────────────────────────────────────────────────────────────────
 safetensors>=0.7.0
 accelerate>=1.0.0
-transformers>=5.0.0   # text encoder (Qwen3), tokeniser
+transformers>=5.0.0
 
 # ── LoRA / fine-tuning ────────────────────────────────────────────────────────
-peft>=0.18.0          # LoRA injection and PEFT adapter save/load
+peft>=0.18.0
 
 # ── HuggingFace Hub ───────────────────────────────────────────────────────────
 huggingface_hub>=1.9.0
-python-dotenv>=1.0.0  # loads HF_TOKEN from .env
+python-dotenv>=1.0.0
 
 # ── image processing ──────────────────────────────────────────────────────────
 Pillow>=12.0.0
@@ -35,6 +46,6 @@ datasets>=3.0.0
 pandas>=2.0.0
 numpy>=1.26.0
 
-# ── visualisation (loss curves, eval panels) ──────────────────────────────────
+# ── visualisation ─────────────────────────────────────────────────────────────
 matplotlib>=3.9.0
 
