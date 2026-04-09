@@ -1,16 +1,46 @@
-# Z-Image Family: A Quantitative Architecture Analysis and Side-by-Side Benchmark
+# Z-Image Turbo × Fuliji — Fine-tuning Exploration
 
-> **GCStream** · DownStreamTech · 下流科技 · April 2026  
-> Models: [`Tongyi-MAI/Z-Image`](https://huggingface.co/Tongyi-MAI/Z-Image) · [`Tongyi-MAI/Z-Image-Turbo`](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)  
-> Code: [`stage1_analysis/compare_models.py`](stage1_analysis/compare_models.py) · [`stage1_analysis/generate_comparisons.py`](stage1_analysis/generate_comparisons.py)
+> **DownFlow** · 下流科技 · April 2026  
+> Base models: [`Tongyi-MAI/Z-Image`](https://huggingface.co/Tongyi-MAI/Z-Image) · [`Tongyi-MAI/Z-Image-Turbo`](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)  
+> Fine-tuned model: [`DownFlow/Z-Image-Turbo-Fuli`](https://huggingface.co/DownFlow/Z-Image-Turbo-Fuli)  
+> Dataset: [`DownFlow/fuliji`](https://huggingface.co/datasets/DownFlow/fuliji)  
+> Code: this repo
 
 ---
 
 ## Abstract
 
-The Z-Image family introduces a **Scalable Single-Stream Diffusion Transformer (S3-DiT)** for high-quality text-to-image generation. This report presents: (1) a detailed weight-level architecture comparison between the base model **Z-Image** (50-step, CFG-enabled) and its accelerated variant **Z-Image-Turbo** (8-step, CFG-free); (2) a benchmark of ~100 side-by-side generated image pairs drawn from diverse prompt datasets; and (3) an analysis of which architectural components were most affected by the two-stage distillation/RL post-training process (Decoupled-DMD + DMDR). We find that the models share **exactly the same architecture** — zero extra parameters for Turbo — and that distillation surgically rewrites only the timestep-conditioning pathway while leaving core attention weights largely intact.
+This project explores how **Z-Image Turbo** — a single-stream diffusion transformer capable of high-quality 8-step inference — can be adapted to the **Fuliji dataset** ([`DownFlow/fuliji`](https://huggingface.co/datasets/DownFlow/fuliji)), a curated collection of 1177 images spanning 405 artists.
+
+We investigate three complementary fine-tuning strategies:
+
+| Stage | Method | Goal |
+|---|---|---|
+| **2** | Residual-stream abliteration | Remove refusal behaviour via direction subtraction |
+| **3B/D** | Full fine-tune (all weights) | Domain adaptation to Fuliji image style/content |
+| **3D** | Artist identity LoRA | Teach specific artist trigger tokens (rank-32 PEFT) |
+
+The resulting fine-tuned checkpoint — **`DownFlow/Z-Image-Turbo-Fuli`** — is a PEFT LoRA adapter over Z-Image Turbo trained on the 8 highest-recurrence artists (≥21 images each, 200 images total, 3000 steps). It supports targeted generation via artist trigger-token prompts:
+
+```python
+from peft import PeftModel
+from diffusers import ZImagePipeline
+import torch
+
+pipe = ZImagePipeline.from_pretrained("Tongyi-MAI/Z-Image-Turbo", torch_dtype=torch.bfloat16)
+pipe.transformer = PeftModel.from_pretrained(pipe.transformer, "DownFlow/Z-Image-Turbo-Fuli")
+pipe = pipe.to("cuda")
+image = pipe("portrait of 年年, long_hair, black_hair, elegant", num_inference_steps=8).images[0]
+```
+
+**Key findings:**
+- Z-Image Turbo is fine-tuneable with LoRA despite being distilled (~39M trainable params, 0.3% of 12B)
+- Artist identity emerges clearly at ~1000 steps; full convergence around 2500–3000 steps
+- Scale factor `--lora_scale 2.0` improves identity recall without visible artefacts at 8-step inference
+- Abliteration (Stage 2) successfully suppresses refusal behaviour with minimal quality impact at α≤0.1
 
 ---
+
 
 ## 1. Model Architecture
 
