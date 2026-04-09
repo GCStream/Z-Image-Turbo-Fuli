@@ -584,11 +584,24 @@ image = pipe("portrait of 年年, long_hair, black_hair, elegant", num_inference
 
 ### 5.7 Planned Future Work
 
-#### Stage 4 — Editing Support
-Z-Image-Omni-Base (not yet released) is the editing-capable variant. Planned work:
-- Integration of Z-Image-Edit once released
-- Implement IP2P-style (InstructPix2Pix) and masking-based editing pipelines
-- Benchmark against `LonelVino/edit_bench`, `facebook/emu_edit_test_set`, and `osunlp/magic_brush` — all of which are already cached locally
+#### Next Step 1 — Scale-up Training on Full Fuliji Dataset
+
+The current `DownFlow/Z-Image-Turbo-Fuli` adapter was trained on 200 images from 8 artists (≥21 images each). The natural next step is to scale up to the **full 1177-image, 405-artist dataset** ([`DownFlow/fuliji`](https://huggingface.co/datasets/DownFlow/fuliji)):
+
+- Increase LoRA rank (32 → 64) to better represent a larger artist vocabulary
+- Train longer (3000 → 6000+ steps) to allow sufficient per-artist exposure at scale
+- Experiment with per-artist learning-rate scheduling (higher LR for low-count artists)
+- Consider hierarchical captioning: global style tags + per-artist trigger token
+
+#### Next Step 2 — Editing Support
+
+Z-Image-Omni-Base (not yet released) is the editing-capable variant. Once available:
+
+- Integration of Z-Image-Edit as a drop-in for the current pipeline
+- IP2P-style (InstructPix2Pix) editing: change outfit, background, expression via text instruction
+- Masking-based inpainting: region-localised edits without full re-generation
+- Benchmark against `LonelVino/edit_bench`, `facebook/emu_edit_test_set`, and `osunlp/magic_brush` (all cached locally)
+- Combine with the artist LoRA: generate in an artist's style, then edit via instruction
 
 ---
 
