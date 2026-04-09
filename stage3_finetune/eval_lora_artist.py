@@ -302,6 +302,8 @@ def main():
     parser.add_argument("--parquet", type=Path, default=PARQUET)
     parser.add_argument("--n_artist", type=int, default=20,
                         help="# artist images to evaluate (one per distinct artist)")
+    parser.add_argument("--artist_filter", nargs="+", default=None,
+                        help="Restrict eval to these specific artists (space-separated)")
     parser.add_argument("--n_sfw",    type=int, default=5,
                         help="# SFW anchor prompts (no original image, just base vs lora)")
     parser.add_argument("--res",      type=int, default=512,
@@ -355,8 +357,30 @@ def main():
     pipe_lora.set_progress_bar_config(disable=True)
 
     # ── sample data ───────────────────────────────────────────────────────────
-    print(f"\nSampling {args.n_artist} artist rows from {args.parquet} …")
-    artist_rows = sample_artist_rows(args.parquet, args.n_artist, args.seed)
+    if args.artist_filter:
+        import pandas as _pd
+        _df = _pd.read_parquet(args.parquet)
+        artist_rows = []
+        for artist in args.artist_filter:
+            group = _df[_df["fuliji"] == artist]
+            if len(group) == 0:
+                print(f"[WARN] artist '{artist}' not found in parquet, skipping")
+                continue
+            row = group.sample(1, random_state=args.seed).iloc[0]
+            ft = list(row["fuliji_tags"]) if hasattr(row["fuliji_tags"], "__iter__") else []
+            it = list(row["image_tags"])  if hasattr(row["image_tags"],  "__iter__") else []
+            artist_rows.append({
+                "image_bytes": row["image"]["bytes"],
+                "artist":      str(row["fuliji"]),
+                "gallery":     str(row.get("gallery", "")),
+                "caption":     build_caption(row["fuliji"], ft, it),
+                "fuliji_tags": ft,
+                "image_tags":  it,
+            })
+        print(f"\nUsing {len(artist_rows)} artist filter rows from {args.parquet} …")
+    else:
+        print(f"\nSampling {args.n_artist} artist rows from {args.parquet} …")
+        artist_rows = sample_artist_rows(args.parquet, args.n_artist, args.seed)
 
     panel_paths = []
     metadata    = []
